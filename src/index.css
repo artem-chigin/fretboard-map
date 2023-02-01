@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    height: 10vh;
+    background-color: darkolivegreen;
+    color: darkorange
+}
+
+main {
+    background-color: antiquewhite;
+    min-height: 85vh;
+}
+
+footer {
+    text-align: center;
+    background-color: darkolivegreen;
+    color: orange;
+    height: 10vh;
+}
