@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 header {
@@ -10,18 +11,22 @@ header {
     text-align: center;
 
     height: 10vh;
-    background-color: darkolivegreen;
-    color: darkorange
+    background-color: lightskyblue;
+    color: brown
 }
 
 main {
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     min-height: 85vh;
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    background-color: darkolivegreen;
-    color: orange;
-    height: 10vh;
+    background-color: lightskyblue;
+
+    color: brown;
+    height: 5vh;
 }

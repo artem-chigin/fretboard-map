@@ -1,15 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import App from './App'
 import './index.css'
+import { createRoot } from 'react-dom/client';
 
-class App extends React.Component {
-    render () {
-        return (
-        <div className='App'>
-            <h1>Hello, React</h1>
-        </div>
-        )
-    }
-}
 
-ReactDOM.render(<App />, document.getElementById('root'))
+
+
+
+// ReactDOM.render(<App />, document.getElementById('root'))
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App />);
