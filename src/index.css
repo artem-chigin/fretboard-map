@@ -26,7 +26,43 @@ footer {
     justify-content: center;
     text-align: center;
     background-color: lightskyblue;
-
     color: brown;
     height: 5vh;
+}
+
+/* .instrument {
+    
+} */
+
+.neck {
+
+    background-color: burlywood;
+    border: solid;
+}
+
+.note {
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+
+.noteContainer {
+
+    /* border: solid; */
+    min-width: 50px;
+}
+
+[visibility="false"] {
+    visibility: hidden;
+}
+
+.fretNumbers {
+    background-color: whitesmoke;
+    text-align: center;
+    border: solid black;
 }
