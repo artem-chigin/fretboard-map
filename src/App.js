@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import DisplayInstrument from './components-for-render/display-instrument';
+import UI from './components-for-render/ui';
 
-
-class App extends React.Component {
+class App extends Component {
     render () {
         return (
         <div className='App'>
-            {/* <h1>Hello, React</h1> */}
+            <UI />
             <DisplayInstrument />
         </div>
         )

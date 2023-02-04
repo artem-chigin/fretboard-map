@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import MusicalInstrument from '../instrument-scale-calculations/musical-instrument';
 
-let baritonUkelele = new MusicalInstrument(18, ["D3", "G3", "B3", "E4"]);
+let baritonUkelele = new MusicalInstrument("Bariton Uke", 18, ["D3", "G3", "B3", "E4"]);
 
 class DisplayInstrument extends Component {
     state = {
