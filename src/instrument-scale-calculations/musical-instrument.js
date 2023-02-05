@@ -1,10 +1,13 @@
 class MusicalInstrument {
-    constructor(numberOfNotes, stringKeys) {
-        this.numberOfNotes = numberOfNotes;
-        this.stringKeys = stringKeys.reverse();
+    constructor(instumentSettings) {
+        this.instrumentName = instumentSettings.instrumentName;
+        this.numberOfNotes = instumentSettings.fretsNumber;
+        this.stringKeys = instumentSettings.tuning.reverse();
+        // this.instrumentName = instrumentName;
+        // this.numberOfNotes = numberOfNotes;
+        // this.stringKeys = stringKeys.reverse();
         this.instrumentRepresentation = this.createFretboard(this.numberOfNotes, this.stringKeys);
         this.generateBoard = this.createFretboard.bind(this)
-        
     }
 
     static chromaticScale = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];

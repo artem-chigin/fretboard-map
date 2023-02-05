@@ -1,5 +1,3 @@
-import MUSIC_CONST from "../instrument-scale-calculations/musical-constants";
-
 const SelectSequence = () => {
     return (
         <div className="select-sequence">

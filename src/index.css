@@ -30,14 +30,16 @@ footer {
     height: 5vh;
 }
 
-/* .instrument {
-    
+/* .fretboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 } */
 
 .neck {
-
     background-color: burlywood;
-    border: solid;
+    /* border: solid; */
 }
 
 .note {
@@ -61,8 +63,41 @@ footer {
     visibility: hidden;
 }
 
-.fretNumbers {
+/* .fretNumbers {
     background-color: whitesmoke;
     text-align: center;
     border: solid black;
+} */
+
+.select-instrument {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.select-instrument button {
+    height: 40px;
+    width: 120px;
+    margin-right: 20px;
+}
+
+.select-note {
+    text-align: center;
+}
+
+.select-note button {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.select-sequence {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.select-sequence button {
+    width: 120px;
+    height: 25px;
+    margin-right: 20px;
 }

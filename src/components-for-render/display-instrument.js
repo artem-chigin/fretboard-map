@@ -1,24 +1,13 @@
-// import { buildQueries } from '@testing-library/react';
-import React, { Component } from 'react';
-import MusicalInstrument from '../instrument-scale-calculations/musical-instrument';
-
-let baritonUkelele = new MusicalInstrument("Bariton Uke", 18, ["D3", "G3", "B3", "E4"]);
-
-class DisplayInstrument extends Component {
-    state = {
-        instrument: baritonUkelele.instrumentRepresentation
-    }
-    render() {
-        return (
+const DisplayInstrument = ({instrument}) => {
+         return (
             <div>
-                <table className='instrument'>
-                    <FretNumbers fretNumbers={baritonUkelele.numberOfNotes}/>
-                    <FretBoard fretboard={baritonUkelele.instrumentRepresentation}/>
+                <h1>{instrument.instrumentName}</h1>
+                <table className="fretboard">
+                    <FretNumbers fretNumbers={instrument.numberOfNotes}/>
+                    <FretBoard fretboard={instrument.instrumentRepresentation}/>
                 </table>
-
             </div>
         )
-    }
 }
 
 const FretNumbers = ({fretNumbers}) => {

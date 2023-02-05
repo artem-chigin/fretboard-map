@@ -1,19 +1,25 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
+import DisplayInstrument from './display-instrument';
 import SelectInstrument from './select-instrument';
 import SelectNote from './select-note';
 import SelectSequence from './select-sequence';
+import instruments from "../instrument-scale-calculations/instruments"
+import MusicalInstrument from '../instrument-scale-calculations/musical-instrument';
 
-class UI extends Component {
-    render() {
+
+function UI() {
+    const [currentInstrument, setCurrentInstrument] = useState(new MusicalInstrument(instruments.baritoneUke));
+    
+    
         return (
         <div className='ui-container'>
-            <h1>UI</h1>
-            <SelectInstrument />
+            <SelectInstrument 
+            onInstrumentClick={(value) => setCurrentInstrument(value)}/>
             <SelectNote />
             <SelectSequence />
+            <DisplayInstrument instrument={currentInstrument}/>
             </div>
         )
-    }
 }
 
 
