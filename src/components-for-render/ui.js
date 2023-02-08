@@ -9,13 +9,15 @@ import MusicalInstrument from '../instrument-scale-calculations/musical-instrume
 
 function UI() {
     const [currentInstrument, setCurrentInstrument] = useState(new MusicalInstrument(instruments.baritoneUke));
-    
-    
+    const [rootNote, setrootNote] = useState("A");
+
+    currentInstrument.findNote(rootNote);
+
         return (
         <div className='ui-container'>
             <SelectInstrument 
             onInstrumentClick={(value) => setCurrentInstrument(value)}/>
-            <SelectNote />
+            <SelectNote onInstrumentClick={(value) => setrootNote(value)}/>
             <SelectSequence />
             <DisplayInstrument instrument={currentInstrument}/>
             </div>

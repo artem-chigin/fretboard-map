@@ -1,5 +1,6 @@
 const MUSIC_CONST = {
     chromaticScale: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"],
+    notesInChromaticScale: 12,
     intervals: {
         p1: 0,
         m2: 1,
@@ -15,8 +16,18 @@ const MUSIC_CONST = {
         M7: 11,
         p8: 12
     },
-    chords: [],
-    scales: []
+    chords: {
+        triad: {
+            maj: [4, 3],
+            m: [3, 4],
+            aug: [4, 4],
+            dim: [3, 3]
+        }
+    },
+    scales: {
+        maj: [2, 2, 1, 2, 2, 2, 1],
+        // m: [2, 1, ]
+    }
 };
 
 export default MUSIC_CONST;

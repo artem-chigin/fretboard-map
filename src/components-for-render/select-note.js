@@ -1,10 +1,10 @@
 import MUSIC_CONST from "../instrument-scale-calculations/musical-constants"
 
-const SelectNote = () => {
-    const temp = MUSIC_CONST.chromaticScale.map(note => <button>{note}</button>)
+function SelectNote({onInstrumentClick}) {
+    const notesButtons = MUSIC_CONST.chromaticScale.map(note => <button onClick={() => onInstrumentClick(note)}>{note}</button>)
     return (
         <div className="select-note">
-            {temp}
+            {notesButtons}
         </div>
     )
 }
