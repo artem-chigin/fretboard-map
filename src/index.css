@@ -101,3 +101,11 @@ footer {
     height: 25px;
     margin-right: 20px;
 }
+
+.sequence-panel {
+    text-align: center;
+}
+
+.sequence-panel button {
+    margin-right: 5px;
+}

@@ -29,16 +29,17 @@ class MusicalInstrument {
         return board
     }
 
-    findNote(noteNameValue) {
+    displaySequence(sequenceValue) {
         this.clearFretBoard();
         for (let string of this.instrumentRepresentation) {
             for (let Note of string) {
-                if (Note.noteName === noteNameValue) {
+                // if (Note.noteName === sequenceValue) {
+                if (sequenceValue.includes(Note.noteName)) {
                     Note.visibility = "true";
                 }
             }
         }
-        return this.instrumentRepresentation
+        // return this.instrumentRepresentation
     }
 
 
@@ -59,7 +60,8 @@ class MusicalInstrument {
             let newIndex = index % MUSIC_CONST.notesInChromaticScale;
             let shift = (index - newIndex)/MUSIC_CONST.notesInChromaticScale;
             let newOctaveNum = Number(octaveNum) + shift
-            notesSequence.push(MusicalInstrument.chromaticScale[newIndex] + String(newOctaveNum))
+            // notesSequence.push(MUSIC_CONST.chromaticScale[newIndex] + String(newOctaveNum))
+            notesSequence.push(MUSIC_CONST.chromaticScale[newIndex])
         }
         return notesSequence
 }

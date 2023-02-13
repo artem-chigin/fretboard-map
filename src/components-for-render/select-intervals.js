@@ -1,5 +1,0 @@
-const SelectIntervals = () => {
-    return (
-        pass
-    )
-}

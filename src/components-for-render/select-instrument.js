@@ -2,8 +2,7 @@ import instruments from "../instrument-scale-calculations/instruments";
 import MusicalInstrument from "../instrument-scale-calculations/musical-instrument";
 
 function SelectInstrument({onInstrumentClick}) {
-
-    function setInstrument(settings) {
+     function setInstrument(settings) {
         const musicalInstrument = new MusicalInstrument(settings);
         onInstrumentClick(musicalInstrument);
     }
