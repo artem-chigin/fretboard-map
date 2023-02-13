@@ -11,10 +11,10 @@ import MUSIC_CONST from '../instrument-scale-calculations/musical-constants';
 
 function UI() {
     const [currentInstrument, setCurrentInstrument] = useState(new MusicalInstrument(instruments.baritoneUke));
-    const [rootNote, setrootNote] = useState("A");
+    const [rootNote, setrootNote] = useState("G");
     const [sequenceType, setSequenceType] = useState("note");
     const [sequenceName, setSequenceName] = useState("")
-    const [sequence, setSequence] = useState(["A"]);
+    const [sequence, setSequence] = useState(["G"]);
     
     function createSequence(keyNote=rootNote, seqType=sequenceType, seqName=sequenceName) {
          if (MUSIC_CONST[seqType].hasOwnProperty(seqName)) {
@@ -29,17 +29,21 @@ function UI() {
     currentInstrument.displaySequence(sequence);
 
         return (
-        <div className='ui-container'>
-            <SelectInstrument 
-            onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}/>
-            <SelectRootNote onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}/>
-            <SelectSequenceType onSequenceClick={(typeOfSequence) => {
-                setSequenceType(typeOfSequence)
-                // setSequenceName("single_note")
-                }}/>
-            <SequencePanel typeOfPanel={sequenceType} onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+        <div className='app'>
+            <div className='ui'>
+                <SelectInstrument 
+                onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}/>
+                <SelectRootNote onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}/>
+                <SelectSequenceType onSequenceClick={(typeOfSequence) => {
+                    setSequenceType(typeOfSequence)
+                    // setSequenceName("single_note")
+                    }}/>
+                <SequencePanel typeOfPanel={sequenceType} onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+            </div>
+            <div className='instrument-container'>
             <DisplayInstrument instrument={currentInstrument}/>
             </div>
+        </div>
         )
 }
 

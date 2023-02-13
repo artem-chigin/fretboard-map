@@ -10,7 +10,7 @@ header {
     justify-content: center;
     text-align: center;
 
-    height: 10vh;
+    min-height: 10vh;
     background-color: lightskyblue;
     color: brown
 }
@@ -27,20 +27,32 @@ footer {
     text-align: center;
     background-color: lightskyblue;
     color: brown;
-    height: 5vh;
+    min-height: 5vh;
 }
 
-/* .fretboard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-} */
+.instrument-representation {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 .neck {
     background-color: burlywood;
+    justify-content: center;
     /* border: solid; */
 }
+
+.fretboard {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .string {
+    border-bottom: solid black 3px;
+    z-index: 1;
+} */
 
 .note {
     background-color: green;
@@ -48,20 +60,39 @@ footer {
     height: 30px;
     border-radius: 15px;
     margin: auto;
+    position: relative;
+    top: 15px;
     /* margin-left: auto;
     margin-right: auto; */
 }
 
 
 .noteContainer {
-
-    /* border: solid; */
     min-width: 50px;
+    border-right: solid whitesmoke 2px;
+    border-bottom: solid black;
+    z-index: 0;
+}
+
+.open-string {
+    position: relative;
+    top: 15px;
+    border: none;
+    font-size: 25px;
+    width: 75px;
 }
 
 [visibility="false"] {
     visibility: hidden;
 }
+
+[id$="note0"], [id="string0"], .open-string {
+background-color: whitesmoke;
+}
+
+/* [id="string0"] {
+    background-color: whitesmoke;
+} */
 
 /* .fretNumbers {
     background-color: whitesmoke;
