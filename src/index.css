@@ -171,3 +171,25 @@ button:hover {
     border: none;
     color: whitesmoke;
 }
+
+
+.ui-and-info {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    box-sizing: content-box;
+    width: 125px;
+    height: 125px;
+    /* border: solid lightslategrey; */
+    background-color: #E9E9ED;
+    border-radius: 10px;
+}

@@ -4,6 +4,7 @@ import SelectInstrument from './select-instrument';
 import SelectRootNote from './select-note';
 import SelectSequenceType from './select-sequence';
 import SequencePanel from './sequence-panel';
+import InfoPanel from './info-panel';
 import instruments from "../instrument-scale-calculations/instruments"
 import MusicalInstrument from '../instrument-scale-calculations/musical-instrument';
 import MUSIC_CONST from '../instrument-scale-calculations/musical-constants';
@@ -33,16 +34,19 @@ function UI() {
 
         return (
         <div className='app'>
-            <div className='ui'>
-                <SelectInstrument 
-                onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}/>
-                <SelectRootNote onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}/>
-                <SelectSequenceType onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
-                <SequencePanel typeOfPanel={sequenceType} onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+            <div className='ui-and-info'>
+                <div className='ui'>
+                    <SelectInstrument 
+                    onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}/>
+                    <SelectRootNote onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}/>
+                    <SelectSequenceType onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+                    <SequencePanel typeOfPanel={sequenceType} onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+                </div>
+                <InfoPanel rootNote={rootNote} sequenceType={sequenceType} sequenceName={sequenceName} sequence={sequence}/>
             </div>
-            <div className='instrument-container'>
-            <DisplayInstrument instrument={currentInstrument}/>
-            </div>
+                <div className='instrument-container'>
+                    <DisplayInstrument instrument={currentInstrument}/>
+                </div>
         </div>
         )
 }
