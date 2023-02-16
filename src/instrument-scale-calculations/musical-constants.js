@@ -29,7 +29,7 @@ const MUSIC_CONST = {
         major: [2, 2, 1, 2, 2, 2, 1],
         minor: [2, 1, 2, 2, 1, 2, 2],
     },
-    note: {single_note: [0]}
+    // note: {single_note: [0]}
 };
 
 export default MUSIC_CONST;
