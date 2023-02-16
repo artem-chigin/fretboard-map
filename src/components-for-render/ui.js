@@ -13,7 +13,7 @@ function UI() {
     const [currentInstrument, setCurrentInstrument] = useState(new MusicalInstrument(instruments.baritoneUke));
     const [rootNote, setrootNote] = useState("G");
     const [sequenceType, setSequenceType] = useState("note");
-    const [sequenceName, setSequenceName] = useState("")
+    const [sequenceName, setSequenceName] = useState("single_note")
     const [sequence, setSequence] = useState(["G"]);
     
     function createSequence(keyNote=rootNote, seqType=sequenceType, seqName=sequenceName) {
@@ -34,10 +34,7 @@ function UI() {
                 <SelectInstrument 
                 onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}/>
                 <SelectRootNote onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}/>
-                <SelectSequenceType onSequenceClick={(typeOfSequence) => {
-                    setSequenceType(typeOfSequence)
-                    // setSequenceName("single_note")
-                    }}/>
+                <SelectSequenceType onSequenceClick={(typeOfSequence) => setSequenceType(typeOfSequence)}/>
                 <SequencePanel typeOfPanel={sequenceType} onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
             </div>
             <div className='instrument-container'>

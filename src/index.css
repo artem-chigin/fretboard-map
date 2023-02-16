@@ -4,6 +4,11 @@
     font-family: sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -11,12 +16,11 @@ header {
     text-align: center;
 
     min-height: 10vh;
-    background-color: lightskyblue;
-    color: brown
+    background-color: #2A6041;
+    color: whitesmoke;
 }
 
 main {
-    background-color: whitesmoke;
     min-height: 85vh;
 }
 
@@ -25,8 +29,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: lightskyblue;
-    color: brown;
+    background-color: #2A6041;
+    color: whitesmoke;
     min-height: 5vh;
 }
 
@@ -37,6 +41,10 @@ footer {
     text-align: center;
 }
 
+.instrument-name {
+    color: black;
+}
+
 .neck {
     background-color: burlywood;
     justify-content: center;
@@ -45,6 +53,7 @@ footer {
 
 .fretboard {
     border-collapse: collapse;
+    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -55,13 +64,18 @@ footer {
 } */
 
 .note {
-    background-color: green;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2A6041;
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
     margin: auto;
     position: relative;
-    top: 15px;
+    top: 17px;
+    color: white;
+    
     /* margin-left: auto;
     margin-right: auto; */
 }
@@ -86,7 +100,7 @@ footer {
     visibility: hidden;
 }
 
-[id$="note0"], [id="string0"], .open-string {
+main, [id$="note0"], [id="string0"], .open-string {
 background-color: whitesmoke;
 }
 
@@ -139,4 +153,21 @@ background-color: whitesmoke;
 
 .sequence-panel button {
     margin-right: 5px;
+}
+
+button {
+    /* background-color: darkgray; */
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+.sequence-name-buttons {
+    padding: 3px;
+}
+
+button:hover {
+    background-color: #2A6041;
+    border: none;
+    color: whitesmoke;
 }
