@@ -14,7 +14,7 @@ function SelectInstrument({onInstrumentClick, currentInstrumentName}) {
         <Button 
             toggled={currentInstrumentName === instruments[name].instrumentName}
             handleClick={setInstrument} 
-            handleClickArguments={instruments[name]}
+            handleClickArguments={[instruments[name]]}
             buttonName={instruments[name].instrumentName}
             key={"instrument" + index}/>
         )

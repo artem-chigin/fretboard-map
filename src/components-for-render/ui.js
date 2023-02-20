@@ -42,10 +42,19 @@ function UI() {
                     <SelectRootNote 
                         onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
                         currentNoteName={rootNote}/>
-                    <SelectSequenceType onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
-                    <SequencePanel typeOfPanel={sequenceType} onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+                    <SelectSequenceType 
+                        onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
+                        currentSequence={sequenceType}/>
+                    <SequencePanel 
+                        typeOfPanel={sequenceType} 
+                        onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
                 </div>
-                <InfoPanel rootNote={rootNote} sequenceType={sequenceType} sequenceName={sequenceName} sequence={sequence} instrumentName={currentInstrument.instrumentName}/>
+                <InfoPanel 
+                    rootNote={rootNote} 
+                    sequenceType={sequenceType} 
+                    sequenceName={sequenceName} 
+                    sequence={sequence} 
+                    instrumentName={currentInstrument.instrumentName}/>
             </div>
                 <div className='instrument-container'>
                     <DisplayInstrument instrument={currentInstrument}/>

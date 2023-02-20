@@ -1,11 +1,23 @@
-function SelectSequenceType({onSequenceClick}) {
+import Button from "./button";
+import MUSIC_CONST from "../instrument-scale-calculations/musical-constants";
+
+
+function SelectSequenceType({onSequenceClick, currentSequence}) {
+
+    const sequences = Object.getOwnPropertyNames(MUSIC_CONST).slice(2);
+    const sequenceTypeButtons = sequences.map((sequenceName, index) => {
+        let firstSequenceElement = Object.getOwnPropertyNames(MUSIC_CONST[sequenceName])[0];
+        return <Button 
+            toggled={currentSequence === sequenceName}
+            buttonName={sequenceName} 
+            handleClickArguments={[sequenceName, firstSequenceElement]} 
+            handleClick={onSequenceClick}
+            key={"sequence" + sequenceName + index}/>   
+    });
  
     return (
         <div className="select-sequence">
-            <button onClick={() => onSequenceClick("intervals", "p1")}>Single note</button>
-            <button onClick={() => onSequenceClick("intervals", "p1")}>Intervals</button>
-            <button onClick={() => onSequenceClick("chords", "major")}>Chords</button>
-            <button onClick={() => onSequenceClick("scales", "major")}>Scales</button>
+            {sequenceTypeButtons}
         </div>
     )
 };
