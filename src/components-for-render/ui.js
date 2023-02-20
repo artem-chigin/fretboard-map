@@ -37,7 +37,8 @@ function UI() {
             <div className='ui-and-info'>
                 <div className='ui'>
                     <SelectInstrument 
-                    onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}/>
+                        onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}
+                        currentInstrumentName={currentInstrument.instrumentName}/>
                     <SelectRootNote 
                         onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
                         currentNoteName={rootNote}/>

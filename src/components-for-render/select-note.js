@@ -9,7 +9,12 @@ function SelectRootNote({onNoteClick, currentNoteName}) {
         
         // (currentNoteName === note) ? <button style={toggledButtonStyle} onClick={() => onNoteClick(note)} key={"button" + index}>{note}</button> :
         // <button onClick={() => onNoteClick(note)} key={"button" + index}>{note}</button>
-        <Button toggled={currentNoteName === note} handleClick={onNoteClick} value={note} key={"button" + index}/>
+        <Button 
+            toggled={currentNoteName === note} 
+            handleClick={onNoteClick} 
+            handleClickArguments={note} 
+            buttonName={note} 
+            key={"button" + index}/>
         )
     return (
         <div className="select-note">
