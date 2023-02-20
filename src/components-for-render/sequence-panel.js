@@ -6,7 +6,7 @@ function SequencePanel({typeOfPanel, currentSequence, onSequenceTypeClick}) {
     const sequenceButtons = sequences.map((sequenceName, index) =>
         <Button 
             toggled={currentSequence === sequenceName}
-            className="sequence-name-buttons"
+            htmlClassName="sequence-name-buttons"
             buttonName={sequenceName}
             handleClickArguments={[sequenceName]}
             handleClick={onSequenceTypeClick}
