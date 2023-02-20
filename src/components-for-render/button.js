@@ -4,7 +4,9 @@ function Button({toggled, handleClick, handleClickArguments, buttonName}) {
     let currentStyle = buttonOf;
     toggled === true ? currentStyle = buttonOn : currentStyle = buttonOf;
     return (
-        <button style={currentStyle} onClick={() => handleClick(...handleClickArguments)}>{buttonName}</button>
+        <button 
+        style={currentStyle} 
+        onClick={() => handleClick(...handleClickArguments)}>{buttonName}</button>
     )
 
 }

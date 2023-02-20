@@ -47,6 +47,7 @@ function UI() {
                         currentSequence={sequenceType}/>
                     <SequencePanel 
                         typeOfPanel={sequenceType} 
+                        currentSequence={sequenceName}
                         onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
                 </div>
                 <InfoPanel 
