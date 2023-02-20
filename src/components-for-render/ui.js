@@ -44,7 +44,7 @@ function UI() {
                         currentNoteName={rootNote}/>
                     <SelectSequenceType 
                         onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
-                        currentSequence={sequenceType}/>
+                        currentSequenceType={sequenceType}/>
                     <SequencePanel 
                         typeOfPanel={sequenceType} 
                         currentSequence={sequenceName}
