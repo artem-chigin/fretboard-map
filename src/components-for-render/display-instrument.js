@@ -1,7 +1,7 @@
 function DisplayInstrument({instrument}) {
          return (
             <div className="instrument-representation">
-                <h1 className="instrument-name">{instrument.instrumentName}</h1>
+                {/* <h1 className="instrument-name">{instrument.instrumentName}</h1> */}
                 <table className="fretboard">
                     <FretNumbers fretNumbers={instrument.numberOfNotes}/>
                     <FretBoard fretboard={instrument.instrumentRepresentation}/>

@@ -185,7 +185,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    justify-content:space-evenly;
     box-sizing: content-box;
     width: 125px;
     height: 125px;

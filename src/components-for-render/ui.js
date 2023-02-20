@@ -38,11 +38,13 @@ function UI() {
                 <div className='ui'>
                     <SelectInstrument 
                     onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}/>
-                    <SelectRootNote onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}/>
+                    <SelectRootNote 
+                        onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
+                        currentNoteName={rootNote}/>
                     <SelectSequenceType onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
                     <SequencePanel typeOfPanel={sequenceType} onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
                 </div>
-                <InfoPanel rootNote={rootNote} sequenceType={sequenceType} sequenceName={sequenceName} sequence={sequence}/>
+                <InfoPanel rootNote={rootNote} sequenceType={sequenceType} sequenceName={sequenceName} sequence={sequence} instrumentName={currentInstrument.instrumentName}/>
             </div>
                 <div className='instrument-container'>
                     <DisplayInstrument instrument={currentInstrument}/>
