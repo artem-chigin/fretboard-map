@@ -185,9 +185,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 3px;
     justify-content:space-evenly;
     box-sizing: content-box;
-    width: 125px;
+    min-width: 125px;
     height: 125px;
     /* border: solid lightslategrey; */
     background-color: #E9E9ED;

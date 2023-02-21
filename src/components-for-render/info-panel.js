@@ -1,3 +1,5 @@
+import DisplaySequence from "./display-sequence";
+
 function InfoPanel({rootNote, sequenceType, sequenceName, sequence, instrumentName}) {
     return (
         <div className="info">
@@ -7,6 +9,7 @@ function InfoPanel({rootNote, sequenceType, sequenceName, sequence, instrumentNa
             <p>{sequenceName}</p>
             {/* <label>Generated sequence:</label> */}
             {/* <h2>{sequence.join(" - ")}</h2> */}
+            <DisplaySequence currentSequence={sequence}/>
         </div>
     )
 };
