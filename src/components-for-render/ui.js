@@ -8,7 +8,7 @@ import InfoPanel from './info-panel';
 import instruments from "../instrument-scale-calculations/instruments"
 import MusicalInstrument from '../instrument-scale-calculations/musical-instrument';
 import MUSIC_CONST from '../instrument-scale-calculations/musical-constants';
-// import DisplaySequence from './display-sequence';
+import DisplaySequence from './display-sequence';
 
 
 function UI() {
@@ -56,9 +56,12 @@ function UI() {
                         sequenceType={sequenceType} 
                         sequenceName={sequenceName} 
                         sequence={sequence} 
-                        instrumentName={currentInstrument.instrumentName}/>
+                        instrumentName={currentInstrument.instrumentName}
+                        currentSequence={sequence}/>
                 </div>
-                {/* <DisplaySequence currentSequence={sequence}/> */}
+                <div className='sequence'>
+                    <DisplaySequence currentSequence={sequence}/>
+                    </div>
                 <div className='instrument-container'>
                     <DisplayInstrument instrument={currentInstrument}/>
                 </div>

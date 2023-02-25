@@ -34,6 +34,11 @@ footer {
     min-height: 5vh;
 }
 
+.instrument-container {
+    display: flex;
+    justify-content:space-between;
+}
+
 .instrument-representation {
     margin-top: 25px;
     margin-left: auto;
@@ -176,8 +181,9 @@ button:hover {
 .ui-and-info {
     margin-top: 15px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 }
 
 
@@ -193,4 +199,15 @@ button:hover {
     /* border: solid lightslategrey; */
     background-color: #E9E9ED;
     border-radius: 10px;
+}
+
+.sequence {
+    margin-top: 40px;
+    max-width: 500px;
+    /* padding: 10px; */
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 26px;
+    text-align: center;
 }

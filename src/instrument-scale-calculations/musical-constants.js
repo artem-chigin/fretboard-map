@@ -17,12 +17,12 @@ const MUSIC_CONST = {
         p8: [12]
     },
     chords: {
-            major: [4, 3],
-            minor: [3, 4],
+            maj: [4, 3],
+            m: [3, 4],
             aug: [4, 4],
             dim: [3, 3],
-            major7: [4, 3, 4],
-            dominant7: [4, 3, 3],
+            maj7: [4, 3, 4],
+            7: [4, 3, 3],
 
     },
     scales: {
