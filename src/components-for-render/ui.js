@@ -29,26 +29,28 @@ function UI() {
     const [sequenceName, setSequenceName] = useState(settings.sequenceName);
     const [sequence, setSequence] = useState(settings.sequence);
     
+    function setInstrument(settingsValues) {
+        const newInstrument = new MusicalInstrument(settingsValues);
+        setCurrentInstrument(newInstrument);
+        settings.instrument = settingsValues;
+        localStorage.setItem("settings", JSON.stringify(settings));
+    }
+
     function createSequence(keyNote=rootNote, seqType=sequenceType, seqName=sequenceName) {
 
-
-        // if (MUSIC_CONST[seqType].hasOwnProperty(seqName)) {
-  
         const newSequence = currentInstrument.generateSeqence([keyNote, 4], MUSIC_CONST[seqType][seqName]);
+
         setrootNote(keyNote); 
         setSequenceType(seqType);
         setSequenceName(seqName);
         setSequence(newSequence);
-        //   }       
-        settings.instrument = instruments.baritoneUke;
+               
         settings.rootNote = keyNote;
         settings.sequenceType = seqType;
         settings.sequenceName = seqName;
         settings.sequence = newSequence;
 
         localStorage.setItem("settings", JSON.stringify(settings));
-
-
     }
 
     currentInstrument.displaySequence(sequence);
@@ -58,7 +60,7 @@ function UI() {
             <div className='ui-and-info'>
                 <div className='ui'>
                     <SelectInstrument 
-                        onInstrumentClick={(instrumentName) => setCurrentInstrument(instrumentName)}
+                        onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
                         currentInstrumentName={currentInstrument.instrumentName}/>
                     <SelectRootNote 
                         onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
