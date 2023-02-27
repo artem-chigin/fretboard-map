@@ -1,10 +1,12 @@
-function DisplayInstrument({instrument}) {
+function DisplayInstrument({instrument, rootNote}) {
          return (
             <div className="instrument-representation">
                 {/* <h1 className="instrument-name">{instrument.instrumentName}</h1> */}
                 <table className="fretboard">
                     <FretNumbers fretNumbers={instrument.numberOfNotes}/>
-                    <FretBoard fretboard={instrument.instrumentRepresentation}/>
+                    <FretBoard 
+                        fretboard={instrument.instrumentRepresentation}
+                        rootNote={rootNote}/>
                 </table>
             </div>
         )
@@ -26,15 +28,25 @@ function Note({note, noteIndex, stringIndex}) {
     )
 }
 
-function InstrumentString({notesArray, stringIndex, openStringKey}) {
+function InstrumentString({notesArray, stringIndex, openStringKey, rootNote}) {
+    
     const stringNotesArray = notesArray.map((element, index) =>
-    <Note note={element} noteIndex={index} stringIndex={stringIndex} key={"note" + index}/>);
+    <Note 
+        note={element} 
+        noteIndex={index} 
+        stringIndex={stringIndex} 
+        key={"note" + index}/>);
     return <tr id={"string" + stringIndex} className="string"><td className="open-string">{openStringKey}</td>{stringNotesArray}</tr>
 }
 
-function FretBoard({fretboard}) {
+function FretBoard({fretboard, rootNote}) {
     const result = fretboard.map((string, index) =>
-    <InstrumentString notesArray={string} stringIndex={index} openStringKey={string[0].noteName} key={"string" + index}/>);
+    <InstrumentString 
+        notesArray={string}
+        stringIndex={index} 
+        openStringKey={string[0].noteName} 
+        key={"string" + index}
+        rootNote={rootNote}/>);
     return <tbody className='neck'>{result}</tbody>
 }
 
