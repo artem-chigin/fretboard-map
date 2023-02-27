@@ -46,9 +46,9 @@ footer {
     text-align: center;
 }
 
-.instrument-name {
+/* .instrument-name {
     color: black;
-}
+} */
 
 .neck {
     background-color: burlywood;
@@ -73,13 +73,14 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #2A6041;
-    width: 34px;
-    height: 34px;
-    border-radius: 17px;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
     margin: auto;
     position: relative;
     top: 17px;
-    color: white;
+    color: MidnightBlue;
+    /* color: white; */
     
     /* margin-left: auto;
     margin-right: auto; */
@@ -88,6 +89,7 @@ footer {
 
 .noteContainer {
     min-width: 50px;
+    /* min-height: 50px; */
     border-right: solid whitesmoke 2px;
     border-bottom: solid black;
     z-index: 0;
@@ -211,3 +213,8 @@ button:hover {
     font-size: 26px;
     text-align: center;
 }
+
+
+/* .some-selector {
+    background-color: ;
+} */

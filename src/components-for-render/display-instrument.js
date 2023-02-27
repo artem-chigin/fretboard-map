@@ -1,3 +1,5 @@
+import noteColors from "../instrument-scale-calculations/notes-colors";
+
 function DisplayInstrument({instrument, rootNote}) {
          return (
             <div className="instrument-representation">
@@ -20,35 +22,34 @@ function FretNumbers({fretNumbers}) {
 };
 
 
-function Note({note, noteIndex, stringIndex}) {
+function Note({note, noteIndex, stringIndex, rootNote}) {
 
-    const noteColors = {
-        "C": "#BA0000",
-        "C#": "6900BA",
-        "Db": "6900BA",
-        "D": "#BABA00",
-        "D#": "#863365",
-        "Eb": "#863365",
-        "E": "#8EB1BA",
-        "F": "#740001",
-        "F#": "#5D65B9",
-        "Gb": "#5D65B9",
-        "G": "#BA5D00",
-        "G#": "#8955B8",
-        "Ab": "#8955B8",
-        "A": "#259525",
-        "A#": "#7B4B5B",
-        "Bb": "#7B4B5B",
-        "B": "#6893BA"
-    }
+    // const noteColor = noteColors[note.noteName]
+    const noteStyle = {
+        backgroundColor: noteColors[note.noteName],
+    };
+    const rootNoteStyle = {
+        widht: "34px",
+        height: "34px",
+        backgroundColor: noteColors[note.noteName],
+        borderRadius: "18px",
+        border: "solid",
+        // fontWeight: "bold",
+        // fontStyle: "italic"
+    };
 
-    const noteColor = noteColors[note.noteName]
+    let currentNoteStyle = noteStyle;
+    if (rootNote === note.noteName) {
+        currentNoteStyle = rootNoteStyle;
+    };
+
+
 
     return (
         <td id={"string" + stringIndex + "note" + noteIndex} className="noteContainer">
             <div className='note' 
                 visibility={note.visibility}
-                style={{backgroundColor: noteColor}}>{note.noteName + note.octave}</div>
+                style={currentNoteStyle}>{note.noteName + note.octave}</div>
         </td>
     )
 }
@@ -60,6 +61,7 @@ function InstrumentString({notesArray, stringIndex, openStringKey, rootNote}) {
         note={element} 
         noteIndex={index} 
         stringIndex={stringIndex} 
+        rootNote={rootNote}
         key={"note" + index}/>);
     return <tr id={"string" + stringIndex} className="string"><td className="open-string">{openStringKey}</td>{stringNotesArray}</tr>
 }
