@@ -22,7 +22,10 @@ const MUSIC_CONST = {
             aug: [4, 4],
             dim: [3, 3],
             maj7: [4, 3, 4],
+            m7: [3, 4, 3],
             dominant7: [4, 3, 3],
+            sus2: [2, 5],
+            sus4: [5, 2],
 
     },
     scales: {

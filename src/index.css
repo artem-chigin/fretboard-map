@@ -79,7 +79,7 @@ footer {
     margin: auto;
     position: relative;
     top: 17px;
-    color: MidnightBlue;
+    color: whitesmoke;
     /* color: white; */
     
     /* margin-left: auto;
@@ -91,6 +91,7 @@ footer {
     min-width: 50px;
     /* min-height: 50px; */
     border-right: solid whitesmoke 2px;
+    /* border-right: solid grey 2px; */
     border-bottom: solid black;
     z-index: 0;
 }

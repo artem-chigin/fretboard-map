@@ -4,15 +4,15 @@ let noteColors = {};
 
 let hue = 0;
 const hueDelta = 360 /12;
-let saturation = "80%";
-let lightness = "70%";
+let saturation = "70%";
+let lightness = "50%";
 
 for (let noteName of MUSIC_CONST.chromaticScale) {
     noteColors[noteName] = `hsl(${hue}, ${saturation}, ${lightness})`
     hue += hueDelta;
 };
 
-console.log(noteColors);
+// console.log(noteColors);
 
 
 // const noteColors = {
