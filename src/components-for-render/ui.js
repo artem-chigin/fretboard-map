@@ -56,7 +56,7 @@ function UI() {
     currentInstrument.displaySequence(sequence);
 
         return (
-        <div className='app'>
+        <div className='fretboard-app'>
             <div className='ui-and-info'>
                 <div className='ui'>
                     <SelectInstrument 

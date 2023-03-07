@@ -5,42 +5,104 @@
 }
 
 body {
-    display: flex;
+    display: flex; 
     flex-direction: column;
+    /* min-height: 100vh; */
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 10px 0 10px 0;
+    box-sizing: border-box;
+    min-height: 7vh;
     text-align: center;
-
-    min-height: 10vh;
     background-color: #2A6041;
     color: whitesmoke;
 }
 
 main {
-    min-height: 85vh;
+    min-height: 88vh;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 5px 0 5px 0;
+    box-sizing: border-box;
+    min-height: 5vh;
     text-align: center;
     background-color: #2A6041;
     color: whitesmoke;
-    min-height: 5vh;
 }
 
-.instrument-container {
+.fretboard-app {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px;
+    padding: 5px;
+}
+
+.ui-and-info {
+    /* margin-top: 15px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 3px;
+    justify-content:space-evenly;
+    box-sizing: content-box;
+    min-width: 125px;
+    height: 125px;
+    /* border: solid lightslategrey; */
+    background-color: #E9E9ED;
+    border-radius: 10px;
+}
+
+.sequence {
+    margin-top: 15px;
+    max-width: 600px;
+    /* padding: 10px; */
+    /* border-radius: 5px; */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 26px;
+    text-align: center;
+}
+
+/* .instrument-container {
+    rotate: 90deg;
+
     display: flex;
     justify-content:space-between;
+} */
+
+@media screen and (max-width: 650px) {
+    /* .neck {
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: blue solid;
+    } */
+    /* .instrument-container {
+        display: flex;
+        justify-content: center;
+    }
+    .inner-instrument-container {
+        rotate: 90deg;
+        min-height: 500px;
+        border: solid red 10px;
+    }
+    .note {
+        rotate: 270deg;
+    } */
 }
 
 .instrument-representation {
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -78,23 +140,17 @@ footer {
     border-radius: 16px;
     margin: auto;
     position: relative;
-    top: 17px;
+    top: 16px;
     color: whitesmoke;
-    /* color: white; */
-    
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 
 
-.noteContainer {
+/* .noteContainer {
     min-width: 50px;
-    /* min-height: 50px; */
     border-right: solid whitesmoke 2px;
-    /* border-right: solid grey 2px; */
     border-bottom: solid black;
     z-index: 0;
-}
+} */
 
 .open-string {
     position: relative;
@@ -181,39 +237,7 @@ button:hover {
 }
 
 
-.ui-and-info {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
-
-.info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 3px;
-    justify-content:space-evenly;
-    box-sizing: content-box;
-    min-width: 125px;
-    height: 125px;
-    /* border: solid lightslategrey; */
-    background-color: #E9E9ED;
-    border-radius: 10px;
-}
-
-.sequence {
-    margin-top: 40px;
-    max-width: 500px;
-    /* padding: 10px; */
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 26px;
-    text-align: center;
-}
 
 
 /* .some-selector {
