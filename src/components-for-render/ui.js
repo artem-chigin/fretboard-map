@@ -87,7 +87,8 @@ function UI() {
                 <div className='instrument-container'>
                     <DisplayInstrument 
                         instrument={currentInstrument}
-                        rootNote={rootNote}/>
+                        rootNote={rootNote}
+                        isMobile={false}/>
                 </div>
         </div>
         )

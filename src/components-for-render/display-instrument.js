@@ -1,57 +1,86 @@
 import noteColors from "../instrument-scale-calculations/notes-colors";
 
-function DisplayInstrument({instrument, rootNote}) {
-         return (
-            <div className="inner-instrument-container">
-                {/* <h1 className="instrument-name">{instrument.instrumentName}</h1> */}
-                <table className="fretboard">
+function DisplayInstrument({instrument, rootNote, isMobile}) {
+
+    if (isMobile === false) {
+        return (
+            <div className="inner-instrument-container"
+                style={{display: "flex"}}>
+                <div className="fretboard"
+                    style={{margin: "20px auto 0px auto"}}>
                     <FretNumbers fretNumbers={instrument.numberOfNotes}/>
                     <FretBoard 
                         fretboard={instrument.instrumentRepresentation}
                         rootNote={rootNote}/>
-                    {/* <div>some info</div> */}
-                    <VerticalFretBoard 
-                        fretboard={instrument.instrumentRepresentation}
-                        rootNote={rootNote}/>
-                </table>
+                </div>
             </div>
         )
+        } else {
+            return (                
+            <VerticalFretBoard 
+            fretboard={instrument.instrumentRepresentation}
+            rootNote={rootNote}/>)
+        }
+        
 }
 
 function FretNumbers({fretNumbers}) {
+    const fretNubersStyle = {
+        minWidth: "52px",
+        display: "inline-block",
+        textAlign: "center"}
     const numbers = Array.from(Array(fretNumbers + 1).keys()).map((number, index) => 
-        <td key={"fretnum" + index}>{number}</td>);
-    return <thead><tr className='fretNumbers'><td></td>{numbers}</tr></thead>
+        <div 
+            key={"fretnum" + index}
+            style={fretNubersStyle}>{number}</div>);
+    return <div 
+                className='fretNumbers' 
+                style={{display: "flex", justifyContent: "end"}}>{numbers}</div>
     
 };
 
 
 function Note({note, noteIndex, stringIndex, rootNote, isVertical}) {
     const noteStyle = {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "32px",
+        height: "32px",
+        borderRadius: "16px",
+        color: "whitesmoke",
         backgroundColor: noteColors[note.noteName],
         position: "relative",
-        top: "16px",
+        top: "20px",
         left: "0"
     };
-    const rootNoteStyle = {
-        widht: "34px",
-        height: "34px",
-        backgroundColor: noteColors[note.noteName],
-        borderRadius: "17px",
-        border: "solid",
-        top: "17px"
 
-    };
+    // const rootNoteStyle = {
+    //     widht: "34px",
+    //     height: "34px",
+    //     backgroundColor: noteColors[note.noteName],
+    //     borderRadius: "17px",
+    //     border: "solid",
+    //     position: "relative",
+    //     top: "17px"
 
+    // };
 
 
     let currentNoteStyle = noteStyle;
     if (rootNote === note.noteName) {
-        currentNoteStyle = rootNoteStyle;
+        currentNoteStyle.width = "34px";
+        currentNoteStyle.height = "34px";
+        currentNoteStyle.borderRadius = "17px";
+        currentNoteStyle.border = "solid"
     };
   
     const noteContainerStyle = {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         minWidth: "50px",
+        minHeight: "40px",
         borderRight: "solid whitesmoke 2px",
         borderBottom: "solid black",
     }
@@ -72,14 +101,14 @@ function Note({note, noteIndex, stringIndex, rootNote, isVertical}) {
     }
 
     return (
-        <td id={"string" + stringIndex + "note" + noteIndex} 
+        <div id={"string" + stringIndex + "note" + noteIndex} 
             className="noteContainer"
             style={currentContainerStyle}
             >
             <div className='note' 
                 visibility={note.visibility}
                 style={currentNoteStyle}>{note.noteName + note.octave}</div>
-        </td>
+        </div>
     )
 }
 
@@ -92,7 +121,7 @@ function InstrumentString({notesArray, stringIndex, openStringKey, rootNote}) {
         stringIndex={stringIndex} 
         rootNote={rootNote}
         key={"note" + index}/>);
-    return <tr id={"string" + stringIndex} className="string"><td className="open-string">{openStringKey}</td>{stringNotesArray}</tr>
+    return <div id={"string" + stringIndex} style={{display: "flex"}} className="string"><div className="open-string">{openStringKey}</div>{stringNotesArray}</div>
 }
 
 function FretBoard({fretboard, rootNote}) {
@@ -103,7 +132,9 @@ function FretBoard({fretboard, rootNote}) {
         openStringKey={string[0].noteName} 
         key={"string" + index}
         rootNote={rootNote}/>);
-    return <tbody className='neck'>{resultBoard}</tbody>
+    return <div 
+                className='neck'
+                style={{backgroundColor: "burlywood"}}>{resultBoard}</div>
 }
 
 function Fret({notesArray, fretIndex, openStringKey, rootNote}) {
@@ -117,7 +148,7 @@ function Fret({notesArray, fretIndex, openStringKey, rootNote}) {
         style={{border: "solid"}}
         isVertical={true}
         />)
-    return <tr id={"fret" + fretIndex} className="fret">{fretNotes}</tr>
+    return <div id={"fret" + fretIndex} className="fret">{fretNotes}</div>
 }
 
 function VerticalFretBoard({fretboard, rootNote}) {
@@ -139,7 +170,7 @@ function VerticalFretBoard({fretboard, rootNote}) {
     fretIndex={index}
     rootNote={rootNote}
     key={index}/>);
-    return <tbody className='vertical-neck'>{resultVerticalBoard}</tbody>;
+    return <div className='vertical-neck'>{resultVerticalBoard}</div>;
 
 }
 

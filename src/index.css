@@ -33,14 +33,11 @@ footer {
 }
 
 .fretboard-app {
-    display: flex;
-    flex-direction: column;
-    border: solid 5px;
     padding: 5px;
+    min-height: 70vh;
 }
 
 .ui-and-info {
-    /* margin-top: 15px; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -72,13 +69,6 @@ footer {
     text-align: center;
 }
 
-/* .instrument-container {
-    rotate: 90deg;
-
-    display: flex;
-    justify-content:space-between;
-} */
-
 @media screen and (max-width: 650px) {
     /* .neck {
         width: 100px;
@@ -101,36 +91,19 @@ footer {
     } */
 }
 
-.instrument-representation {
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
 
-/* .instrument-name {
-    color: black;
-} */
-
-.neck {
-    background-color: burlywood;
-    justify-content: center;
-    /* border: solid; */
-}
-
-.fretboard {
-    border-collapse: collapse;
+/* .fretboard {
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 /* .string {
     border-bottom: solid black 3px;
     z-index: 1;
 } */
 
-.note {
+/* .note {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,10 +112,8 @@ footer {
     height: 32px;
     border-radius: 16px;
     margin: auto;
-    position: relative;
-    top: 16px;
     color: whitesmoke;
-}
+} */
 
 
 /* .noteContainer {
