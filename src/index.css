@@ -69,26 +69,117 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 650px) {
-    /* .neck {
-        width: 100px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        border: blue solid;
-    } */
-    /* .instrument-container {
+.inner-instrument-container {
+    display: flex;
+}
+
+.fretboard {
+    margin: 20px auto 0px auto;
+}
+
+.fretNumContainer {
+    min-width: 52px;
+    display: inline-block;
+    text-align: center;
+}
+
+.fretNumbers {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    color: whitesmoke;
+    position: relative;
+    top: 20px;
+}
+
+.noteContainer {
         display: flex;
         justify-content: center;
+        align-items: center;
+        min-width: 50px;
+        min-height: 40px;
+        border-right: solid whitesmoke 2px;
+        border-bottom: solid black;
+}
+
+.string {
+    display: flex;
+    background-color: burlywood;
+}
+
+.open-string {
+    position: relative;
+    top: 15px;
+    border: none;
+    font-size: 25px;
+    width: 75px;
+}
+
+.neck {
+    /* background-color: burlywood; */
+}
+
+@media screen and (max-width: 650px) {
+    .fretboard {
+        display: flex;
+        flex-direction: row;
+        border: solid lightgrey;
+        margin: 0 auto;
     }
-    .inner-instrument-container {
-        rotate: 90deg;
-        min-height: 500px;
-        border: solid red 10px;
+    .fretNumbers {
+        flex-direction: column;
+        align-items: flex-end;
     }
+    .neck {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .string {
+        flex-direction: column;
+        background-color: burlywood;
+        border-left: solid;
+
+    }
+
+    .open-string {
+        /* min-width: 40px; */
+        width: 40px;
+        height: 40px;
+        /* margin-bottom: 30px; */
+        left: -15px;
+        top: 0;
+        border: solid whitesmoke
+    }
+    .noteContainer {
+        min-width: 40px;
+        min-height: 50px;
+        border: none;
+        box-sizing: border-box;
+        border-bottom: whitesmoke solid 2px;
+    }
+
     .note {
-        rotate: 270deg;
-    } */
+        left: -20px;
+        top: 0;
+    }
+
+    .fretNumContainer {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        height: 50px;
+        border: none;
+        /* justify-content: center; */
+        /* border: solid 1px; */
+    }
 }
 
 
@@ -123,13 +214,7 @@ footer {
     z-index: 0;
 } */
 
-.open-string {
-    position: relative;
-    top: 15px;
-    border: none;
-    font-size: 25px;
-    width: 75px;
-}
+
 
 [visibility="false"] {
     visibility: hidden;
