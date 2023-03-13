@@ -7,6 +7,7 @@ import SelectRootNote from './select-note';
 import SelectSequenceType from './select-sequence';
 import SelectSequenceTypeMobile from './select-sequence-mobile';
 import SequencePanel from './sequence-panel';
+import SequenceDropDown from './sequence-dropdown-mobile';
 import InfoPanel from './info-panel';
 import instruments from "../instrument-scale-calculations/instruments";
 import MusicalInstrument from '../instrument-scale-calculations/musical-instrument';
@@ -73,6 +74,10 @@ function UI() {
                         <SelectSequenceTypeMobile 
                             onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
                             currentSequenceType={sequenceType}/>
+                        <SequenceDropDown 
+                            typeOfSequence={sequenceType} 
+                            currentSequence={sequenceName}
+                            onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
                     </div>
                     <div className='desktop-ui'>
                         <SelectInstrument 
