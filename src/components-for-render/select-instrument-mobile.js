@@ -1,13 +1,13 @@
 import instruments from "../instrument-scale-calculations/instruments";
-import DropDown from "./dropdown";
+import DropDownOption from "./dropdown";
 
 function SelectInstrumentMobile({onInstrumentClick}) {
     const instrumentArray = Object.getOwnPropertyNames(instruments);
     const instrumentsDropdown = instrumentArray.map((name, index ) =>
-    <DropDown 
+    <DropDownOption 
         handleClick={onInstrumentClick} 
         handleClickArguments={[instruments[name]]} 
-        buttonName={instruments[name].instrumentName}
+        optionName={instruments[name].instrumentName}
         key={"instrument" + index} />
 )
 return (

@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import DisplayInstrument from './display-instrument';
 import SelectInstrument from './select-instrument';
-import SelectInstrumentMobile from './select-instrument-m';
+import SelectInstrumentMobile from './select-instrument-mobile';
 import SelectRootNote from './select-note';
+
 import SelectSequenceType from './select-sequence';
 import SequencePanel from './sequence-panel';
 import InfoPanel from './info-panel';
@@ -10,6 +11,7 @@ import instruments from "../instrument-scale-calculations/instruments";
 import MusicalInstrument from '../instrument-scale-calculations/musical-instrument';
 import MUSIC_CONST from '../instrument-scale-calculations/musical-constants';
 import DisplaySequence from './display-sequence';
+import SelectRootNoteMobile from './select-note-mobile';
 
 
 function UI() {
@@ -60,23 +62,31 @@ function UI() {
         <div className='fretboard-app'>
             <div className='ui-and-info'>
                 <div className='ui'>
-                    <SelectInstrumentMobile 
-                        onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
-                        currentInstrumentName={currentInstrument.instrumentName}/>
-                    <SelectInstrument 
-                        onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
-                        currentInstrumentName={currentInstrument.instrumentName}/>
-                    <SelectRootNote 
-                        onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
-                        currentNoteName={rootNote}/>
-                    <SelectSequenceType 
-                        onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
-                        currentSequenceType={sequenceType}/>
-                    <SequencePanel 
-                        typeOfPanel={sequenceType} 
-                        currentSequence={sequenceName}
-                        onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+                    <div className='mobile-ui'>
+                        <SelectInstrumentMobile 
+                            onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
+                            currentInstrumentName={currentInstrument.instrumentName}/>
+                        <SelectRootNoteMobile 
+                            onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
+                            currentNoteName={rootNote}/>
+                    </div>
+                    <div className='desktop-ui'>
+                        <SelectInstrument 
+                            onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
+                            currentInstrumentName={currentInstrument.instrumentName}/>
+                        <SelectRootNote 
+                            onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
+                            currentNoteName={rootNote}/>
+                        <SelectSequenceType 
+                            onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
+                            currentSequenceType={sequenceType}/>
+                        <SequencePanel 
+                            typeOfPanel={sequenceType} 
+                            currentSequence={sequenceName}
+                            onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
                 </div>
+                    </div>
+                    
                     <InfoPanel 
                         rootNote={rootNote} 
                         sequenceType={sequenceType} 

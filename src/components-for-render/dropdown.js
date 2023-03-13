@@ -1,12 +1,12 @@
-function DropDown({handleClick, handleClickArguments, buttonName, htmlClassName}) {
+function DropDownOption({handleClick, handleClickArguments, optionName, htmlClassName}) {
 
     return (
         <option 
         className={htmlClassName}
         // style={currentStyle} 
-        onClick={() => handleClick(...handleClickArguments)}>{buttonName}</option>
+        onClick={() => handleClick(...handleClickArguments)}>{optionName}</option>
     )
 
 }
 
-export default DropDown
+export default DropDownOption
