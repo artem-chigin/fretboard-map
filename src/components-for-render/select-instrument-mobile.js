@@ -12,7 +12,9 @@ function SelectInstrumentMobile({onInstrumentClick, currentInstrumentName}) {
         key={"instrument" + index} />
 )
 return (
-    <select className="instruments-dropdown">
+    <select 
+        className="instruments-dropdown"
+        defaultValue={currentInstrumentName}>
         {instrumentsDropdown}
     </select>
 )

@@ -5,7 +5,7 @@ function SequenceDropDown({typeOfSequence, onSequenceTypeClick, currentSequence}
     const sequences = Object.getOwnPropertyNames(MUSIC_CONST[typeOfSequence]);
     const sequenceButtons = sequences.map((sequenceName, index) =>
         <DropDownOption 
-            selectedOption={currentSequence === sequenceName}
+            // selectedOption={currentSequence === sequenceName}
             htmlClassName="sequence-name-option"
             optionName={sequenceName}
             handleClickArguments={[sequenceName]}
@@ -14,7 +14,10 @@ function SequenceDropDown({typeOfSequence, onSequenceTypeClick, currentSequence}
 );
 
     return (
-        <select className="sequence-dropdown">
+        <select 
+            className="sequence-dropdown"
+            defaultValue={currentSequence}
+            >
             {sequenceButtons}
         </select>
 )

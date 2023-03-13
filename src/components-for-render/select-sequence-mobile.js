@@ -14,7 +14,8 @@ function SelectSequenceTypeMobile({onSequenceClick, currentSequenceType}) {
     }
     )
     return (
-        <select>
+        <select
+        defaultValue={currentSequenceType}>
             {sequenceTypeOptions}
         </select>
     );

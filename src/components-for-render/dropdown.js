@@ -3,7 +3,7 @@ function DropDownOption({handleClick, handleClickArguments, optionName, htmlClas
     return (
         <option 
         className={htmlClassName}
-        selected={selectedOption}
+        // selected={selectedOption}
         onClick={() => handleClick(...handleClickArguments)}>{optionName}</option>
     )
 

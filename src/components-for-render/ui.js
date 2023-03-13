@@ -60,26 +60,27 @@ function UI() {
 
     currentInstrument.displaySequence(sequence);
 
-        return (
+    return (
         <div className='fretboard-app'>
-            <div className='ui-and-info'>
-                <div className='ui'>
-                    <div className='mobile-ui'>
-                        <SelectInstrumentMobile 
-                            onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
-                            currentInstrumentName={currentInstrument.instrumentName}/>
-                        <SelectRootNoteMobile 
-                            onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
-                            currentNoteName={rootNote}/>
-                        <SelectSequenceTypeMobile 
-                            onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
-                            currentSequenceType={sequenceType}/>
-                        <SequenceDropDown 
-                            typeOfSequence={sequenceType} 
-                            currentSequence={sequenceName}
-                            onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
-                    </div>
-                    <div className='desktop-ui'>
+            <div className='mobile-and-decktop-ui'>
+                <div className='mobile-ui'>
+                    <SelectInstrumentMobile 
+                        onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
+                        currentInstrumentName={currentInstrument.instrumentName}/>
+                    <SelectRootNoteMobile 
+                        onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
+                        currentNoteName={rootNote}/>
+                    <SelectSequenceTypeMobile 
+                        onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
+                        currentSequenceType={sequenceType}/>
+                    <SequenceDropDown 
+                        typeOfSequence={sequenceType} 
+                        currentSequence={sequenceName}
+                        onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+                </div>
+                <div className='desktop-ui'>
+                    <div className='ui-and-info'>
+                        <div className='ui'>
                         <SelectInstrument 
                             onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
                             currentInstrumentName={currentInstrument.instrumentName}/>
@@ -93,17 +94,19 @@ function UI() {
                             typeOfPanel={sequenceType} 
                             currentSequence={sequenceName}
                             onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
-                </div>
+                        </div>
+                        <div className='info'>
+                            <InfoPanel 
+                                rootNote={rootNote} 
+                                sequenceType={sequenceType} 
+                                sequenceName={sequenceName} 
+                                sequence={sequence} 
+                                instrumentName={currentInstrument.instrumentName}
+                                currentSequence={sequence}/>
+                        </div>
                     </div>
-                    
-                    <InfoPanel 
-                        rootNote={rootNote} 
-                        sequenceType={sequenceType} 
-                        sequenceName={sequenceName} 
-                        sequence={sequence} 
-                        instrumentName={currentInstrument.instrumentName}
-                        currentSequence={sequence}/>
                 </div>
+            </div>
                 <div className='sequence'>
                     <DisplaySequence currentSequence={sequence}/>
                     </div>
