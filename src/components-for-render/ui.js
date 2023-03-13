@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import DisplayInstrument from './display-instrument';
 import SelectInstrument from './select-instrument';
+import SelectInstrumentMobile from './select-instrument-m';
 import SelectRootNote from './select-note';
 import SelectSequenceType from './select-sequence';
 import SequencePanel from './sequence-panel';
@@ -59,6 +60,9 @@ function UI() {
         <div className='fretboard-app'>
             <div className='ui-and-info'>
                 <div className='ui'>
+                    <SelectInstrumentMobile 
+                        onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
+                        currentInstrumentName={currentInstrument.instrumentName}/>
                     <SelectInstrument 
                         onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
                         currentInstrumentName={currentInstrument.instrumentName}/>
