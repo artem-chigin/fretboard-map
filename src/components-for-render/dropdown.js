@@ -1,9 +1,9 @@
-function DropDownOption({handleClick, handleClickArguments, optionName, htmlClassName}) {
+function DropDownOption({handleClick, handleClickArguments, optionName, htmlClassName, selectedOption}) {
 
     return (
         <option 
         className={htmlClassName}
-        // style={currentStyle} 
+        selected={selectedOption}
         onClick={() => handleClick(...handleClickArguments)}>{optionName}</option>
     )
 
