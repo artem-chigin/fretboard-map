@@ -33,8 +33,38 @@ footer {
 }
 
 .fretboard-app {
-    padding: 5px;
+    /* padding: 5px; */
     min-height: 70vh;
+}
+.mobile-ui {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
+    margin: 0 auto;
+    /* border: solid; */
+    min-width: 100vw;
+
+    /* max-width: 600px; */
+    /* background-color: cadetblue; */
+}
+/* .select-mobile {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.dropdown {
+    /* max-width: 500px; */
+    min-width: 50%;
+    flex: 1;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #2A6041;
+    color: whitesmoke;
+    border: none;
+    border-bottom: whitesmoke solid 1px;
+    border-right: whitesmoke solid 1px;
 }
 
 .ui-and-info {
@@ -115,6 +145,10 @@ footer {
     background-color: burlywood;
 }
 
+.string-container {
+    display: flex;
+}
+
 .open-string {
     position: relative;
     top: 15px;
@@ -128,10 +162,13 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+    header {
+        display: none;
+    }
     .fretboard {
         display: flex;
         flex-direction: row;
-        border: solid lightgrey;
+        /* border: solid lightgrey; */
         margin: 0 auto;
     }
     .fretNumbers {
@@ -142,21 +179,26 @@ footer {
         display: flex;
         flex-direction: row-reverse;
     }
+    .string-container {
+        display: inline;
+    }
     .string {
         flex-direction: column;
-        background-color: burlywood;
+        box-sizing: content-box;
+        /* background-color: burlywood; */
         border-left: solid;
 
     }
 
     .open-string {
         /* min-width: 40px; */
+        box-sizing: border-box;
         width: 40px;
         height: 40px;
         /* margin-bottom: 30px; */
         left: -15px;
         top: 0;
-        border: solid whitesmoke
+        /* border: solid whitesmoke 10px; */
     }
     .noteContainer {
         min-width: 40px;
@@ -179,6 +221,12 @@ footer {
         border: none;
         /* justify-content: center; */
         /* border: solid 1px; */
+    }
+    .ui-and-info {
+        display: none;
+    }
+    .mobile-ui {
+        display: flex;
     }
 }
 

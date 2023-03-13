@@ -14,12 +14,16 @@ function SequenceDropDown({typeOfSequence, onSequenceTypeClick, currentSequence}
 );
 
     return (
-        <select 
-            className="sequence-dropdown"
-            defaultValue={currentSequence}
-            >
-            {sequenceButtons}
-        </select>
+        // <div className="select-mobile">
+            // <label htmlFor="sequence-dropdown">Sequence: </label>
+            <select 
+                name="sequence-dropdown"
+                className="dropdown"
+                defaultValue={currentSequence}
+                >
+                {sequenceButtons}
+            </select>
+        // </div>
 )
 };
 

@@ -14,10 +14,15 @@ function SelectSequenceTypeMobile({onSequenceClick, currentSequenceType}) {
     }
     )
     return (
-        <select
-        defaultValue={currentSequenceType}>
-            {sequenceTypeOptions}
-        </select>
+        // <div className="select-mobile">
+            // <label htmlFor="sequence-type-dropdown">Sequence type: </label>
+            <select 
+                name="sequence-type-dropdown"
+                className="dropdown"
+                defaultValue={currentSequenceType}>
+                {sequenceTypeOptions}
+            </select>
+        // </div>
     );
 }
 

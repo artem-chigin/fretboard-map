@@ -11,11 +11,15 @@ function SelectRootNoteMobile({onNoteClick, currentNoteName}) {
         key={"option" + index}
     />)
     return (
-        <select 
-            className="notes-dropdown"
-            defaultValue={currentNoteName}>
-            {NoteOptions}
-        </select>
+        // <div className="select-mobile">
+            // <label htmlFor="notes-dropdown">Root note: </label>
+            <select 
+                name="notes-dropdown"
+                className="dropdown"
+                defaultValue={currentNoteName}>
+                {NoteOptions}
+            </select>
+        // </div>
     )
 
 }

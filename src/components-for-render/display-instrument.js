@@ -100,7 +100,14 @@ function InstrumentString({notesArray, stringIndex, openStringKey, rootNote}) {
         stringIndex={stringIndex} 
         rootNote={rootNote}
         key={"note" + index}/>);
-    return <div id={"string" + stringIndex}  className="string"><div className="open-string">{openStringKey}</div>{stringNotesArray}</div>
+    return (
+    <div className="string-container">
+        <div className="open-string">
+            {openStringKey}
+        </div>
+        <div className="string" id={"string" + stringIndex}>{stringNotesArray}</div>
+    </div>
+    )
 }
 
 function FretBoard({fretboard, rootNote}) {
