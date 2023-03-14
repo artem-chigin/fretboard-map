@@ -10,21 +10,22 @@ body {
 }
 
 header {
-    padding: 10px 0 10px 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 7vh;
-    text-align: center;
     background-color: #2A6041;
     color: whitesmoke;
 }
 
-main {
+/* main {
     min-height: 88vh;
-}
+} */
 
 footer {
-    padding: 5px 0 5px 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 5vh;
     text-align: center;
     background-color: #2A6041;
@@ -32,7 +33,10 @@ footer {
 }
 
 .fretboard-app {
-    min-height: 70vh;
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .mobile-ui {
@@ -67,7 +71,7 @@ footer {
 }
 
 .instrument-container {
-    margin: 10px auto 20px auto;
+    margin: 20px auto 40px auto;
 }
 
 .inner-instrument-container {
