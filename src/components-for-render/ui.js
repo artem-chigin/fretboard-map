@@ -65,18 +65,18 @@ function UI() {
             <div className='mobile-and-decktop-ui'>
                 <div className='mobile-ui'>
                     <SelectInstrumentMobile 
-                        onInstrumentClick={(instrumentSettings) => setInstrument(instrumentSettings)}
+                        onInstrumentChange={(instrumentSettings) => setInstrument(instrumentSettings)}
                         currentInstrumentName={currentInstrument.instrumentName}/>
                     <SelectRootNoteMobile 
-                        onNoteClick={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
+                        onNoteChange={(keyNote) => createSequence(keyNote, sequenceType, sequenceName)}
                         currentNoteName={rootNote}/>
                     <SelectSequenceTypeMobile 
-                        onSequenceClick={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
+                        onSequenceTypeChange={(sequenceType, sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}
                         currentSequenceType={sequenceType}/>
                     <SequenceDropDown 
                         typeOfSequence={sequenceType} 
                         currentSequence={sequenceName}
-                        onSequenceTypeClick={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
+                        onSequenceChange={(sequenceName) => createSequence(rootNote, sequenceType, sequenceName)}/>
                 </div>
                 <div className='desktop-ui'>
                     <div className='ui-and-info'>

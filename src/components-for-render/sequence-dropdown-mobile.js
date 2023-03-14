@@ -1,23 +1,19 @@
 import MUSIC_CONST from "../instrument-scale-calculations/musical-constants"
 import DropDownOption from "./dropdown"
 
-function SequenceDropDown({typeOfSequence, onSequenceTypeClick, currentSequence}) {
+function SequenceDropDown({onSequenceChange, typeOfSequence, currentSequence}) {
     const sequences = Object.getOwnPropertyNames(MUSIC_CONST[typeOfSequence]);
     const sequenceButtons = sequences.map((sequenceName, index) =>
         <DropDownOption 
-            // selectedOption={currentSequence === sequenceName}
             htmlClassName="sequence-name-option"
             optionName={sequenceName}
             handleClickArguments={sequenceName}
-            // handleClick={onSequenceTypeClick}
             key={sequenceName + index}/>
 );
 
     return (
-        // <div className="select-mobile">
-            // <label htmlFor="sequence-dropdown">Sequence: </label>
             <select 
-            onChange={e => onSequenceTypeClick(e.target.value)}
+            onChange={e => onSequenceChange(e.target.value)}
 
                 name="sequence-dropdown"
                 className="dropdown"
@@ -25,7 +21,6 @@ function SequenceDropDown({typeOfSequence, onSequenceTypeClick, currentSequence}
                 >
                 {sequenceButtons}
             </select>
-        // </div>
 )
 };
 
