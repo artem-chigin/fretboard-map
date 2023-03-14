@@ -7,7 +7,6 @@
 body {
     display: flex; 
     flex-direction: column;
-    /* min-height: 100vh; */
 }
 
 header {
@@ -33,38 +32,11 @@ footer {
 }
 
 .fretboard-app {
-    /* padding: 5px; */
     min-height: 70vh;
 }
+
 .mobile-ui {
     display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* justify-content: flex-end; */
-    margin: 0 auto;
-    /* border: solid; */
-    min-width: 100vw;
-
-    /* max-width: 600px; */
-    /* background-color: cadetblue; */
-}
-/* .select-mobile {
-    display: flex;
-    justify-content: flex-end;
-} */
-
-.dropdown {
-    /* max-width: 500px; */
-    min-width: 50%;
-    flex: 1;
-    height: 30px;
-    font-size: 20px;
-    text-align: center;
-    background-color: #2A6041;
-    color: whitesmoke;
-    border: none;
-    border-bottom: whitesmoke solid 1px;
-    border-right: whitesmoke solid 1px;
 }
 
 .ui-and-info {
@@ -83,20 +55,19 @@ footer {
     box-sizing: content-box;
     min-width: 125px;
     height: 125px;
-    /* border: solid lightslategrey; */
     background-color: #E9E9ED;
     border-radius: 10px;
 }
 
 .sequence {
-    margin-top: 15px;
+    margin: 10px auto;
     max-width: 600px;
-    /* padding: 10px; */
-    /* border-radius: 5px; */
-    margin-left: auto;
-    margin-right: auto;
     font-size: 26px;
     text-align: center;
+}
+
+.instrument-container {
+    margin: 10px auto 20px auto;
 }
 
 .inner-instrument-container {
@@ -157,24 +128,20 @@ footer {
     width: 75px;
 }
 
-.neck {
-    /* background-color: burlywood; */
-}
-
 @media screen and (max-width: 650px) {
     header {
         display: none;
     }
+
     .fretboard {
         display: flex;
         flex-direction: row;
-        /* border: solid lightgrey; */
-        margin: 0 auto;
     }
+
     .fretNumbers {
         flex-direction: column;
-        align-items: flex-end;
     }
+
     .neck {
         display: flex;
         flex-direction: row-reverse;
@@ -184,27 +151,21 @@ footer {
     }
     .string {
         flex-direction: column;
-        box-sizing: content-box;
-        /* background-color: burlywood; */
         border-left: solid;
 
     }
 
     .open-string {
-        /* min-width: 40px; */
-        box-sizing: border-box;
         width: 40px;
         height: 40px;
-        /* margin-bottom: 30px; */
         left: -15px;
         top: 0;
-        /* border: solid whitesmoke 10px; */
+        text-align: center;
     }
     .noteContainer {
         min-width: 40px;
         min-height: 50px;
         border: none;
-        box-sizing: border-box;
         border-bottom: whitesmoke solid 2px;
     }
 
@@ -215,54 +176,32 @@ footer {
 
     .fretNumContainer {
         display: flex;
-        /* justify-content: center; */
         align-items: center;
         height: 50px;
         border: none;
-        /* justify-content: center; */
-        /* border: solid 1px; */
     }
     .ui-and-info {
         display: none;
     }
     .mobile-ui {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 100vw;
+    }
+    .dropdown {
+        min-width: 50%;
+        flex: 1;
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+        background-color: #2A6041;
+        color: whitesmoke;
+        border: none;
+        border-bottom: whitesmoke solid 1px;
+        border-right: whitesmoke solid 1px;
     }
 }
-
-
-/* .fretboard {
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* .string {
-    border-bottom: solid black 3px;
-    z-index: 1;
-} */
-
-/* .note {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #2A6041;
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-    margin: auto;
-    color: whitesmoke;
-} */
-
-
-/* .noteContainer {
-    min-width: 50px;
-    border-right: solid whitesmoke 2px;
-    border-bottom: solid black;
-    z-index: 0;
-} */
-
-
 
 [visibility="false"] {
     visibility: hidden;
@@ -271,16 +210,6 @@ footer {
 main, [id$="note0"], [id="string0"], .open-string {
 background-color: whitesmoke;
 }
-
-/* [id="string0"] {
-    background-color: whitesmoke;
-} */
-
-/* .fretNumbers {
-    background-color: whitesmoke;
-    text-align: center;
-    border: solid black;
-} */
 
 .select-instrument {
     display: flex;
@@ -324,7 +253,6 @@ background-color: whitesmoke;
 }
 
 button {
-    /* background-color: darkgray; */
     color: black;
     border: none;
     border-radius: 5px;
@@ -339,11 +267,3 @@ button:hover {
     border: none;
     color: whitesmoke;
 }
-
-
-
-
-
-/* .some-selector {
-    background-color: ;
-} */
