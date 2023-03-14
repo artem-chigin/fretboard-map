@@ -8,8 +8,8 @@ function SequenceDropDown({typeOfSequence, onSequenceTypeClick, currentSequence}
             // selectedOption={currentSequence === sequenceName}
             htmlClassName="sequence-name-option"
             optionName={sequenceName}
-            handleClickArguments={[sequenceName]}
-            handleClick={onSequenceTypeClick}
+            handleClickArguments={sequenceName}
+            // handleClick={onSequenceTypeClick}
             key={sequenceName + index}/>
 );
 
@@ -17,6 +17,8 @@ function SequenceDropDown({typeOfSequence, onSequenceTypeClick, currentSequence}
         // <div className="select-mobile">
             // <label htmlFor="sequence-dropdown">Sequence: </label>
             <select 
+            onChange={e => onSequenceTypeClick(e.target.value)}
+
                 name="sequence-dropdown"
                 className="dropdown"
                 defaultValue={currentSequence}
