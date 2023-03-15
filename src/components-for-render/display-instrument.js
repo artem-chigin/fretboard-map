@@ -49,9 +49,9 @@ function Note({note, noteIndex, stringIndex, rootNote, isVertical}) {
 
     // let currentNoteStyle = noteStyle;
     if (rootNote === note.noteName) {
-        noteStyle.widht = "34px";
-        noteStyle.height = "34px";
-        noteStyle.borderRadius = "17px";
+        noteStyle.widht = "4.4vh";
+        noteStyle.height = "4.4vh";
+        noteStyle.borderRadius = "2.2vh";
         noteStyle.border = "solid";
         // noteStyle.top = "17px";
     };
