@@ -36,55 +36,21 @@ function Note({note, noteIndex, stringIndex, rootNote, isVertical}) {
         backgroundColor: noteColors[note.noteName],
     };
 
-    // const rootNoteStyle = {
-    //     widht: "34px",
-    //     height: "34px",
-    //     backgroundColor: noteColors[note.noteName],
-    //     borderRadius: "17px",
-    //     border: "solid",
-    //     position: "relative",
-    //     top: "17px"
-    // };
+    const noteClassNames = {note: "note", rootNote: "root-note"};
+    let noteClass = "";
 
-
-    // let currentNoteStyle = noteStyle;
     if (rootNote === note.noteName) {
-        noteStyle.widht = "4.4vh";
-        noteStyle.height = "4.4vh";
-        noteStyle.borderRadius = "2.2vh";
-        noteStyle.border = "solid";
-        // noteStyle.top = "17px";
+        noteClass = noteClassNames.rootNote;
+
+    } else {
+        noteClass = noteClassNames.note;
     };
   
-    // const noteContainerStyle = {
-    //     display: "flex",
-    //     justifyContent: "center",
-    //     alignItems: "center",
-    //     minWidth: "50px",
-    //     minHeight: "40px",
-    //     borderRight: "solid whitesmoke 2px",
-    //     borderBottom: "solid black",
-    // }
-    // const verticalNoteContainerStyle = {
-    //     minWidth: "50px",
-    //     minHeight: "75px",
-    //     borderBottom: "solid whitesmoke 2px",
-    //     borderRight: "solid black",
-    //     border: "solid"
-    // }
-
-    // let currentContainerStyle = noteContainerStyle;
-    // if (isVertical) {
-    //     currentContainerStyle = verticalNoteContainerStyle;
-    //     currentNoteStyle.top = "0";
-    //     currentNoteStyle.left = "25px";
-    //     // console.log(currentNoteStyle);
-    // }
 
     return (
         <div id={"string" + stringIndex + "note" + noteIndex} 
             className="noteContainer">
-            <div className='note' 
+            <div className={noteClass} 
                 visibility={note.visibility}
                 style={noteStyle}>{note.noteName + note.octave}</div>
         </div>

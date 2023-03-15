@@ -116,7 +116,7 @@ function UI() {
                         rootNote={rootNote}
                         isMobile={false}/>
                 </div>
-                <div></div>
+                <div className='empty-block'></div>
         </div>
         )
 }
