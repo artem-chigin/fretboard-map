@@ -12,13 +12,11 @@ function SequenceDropDown({onSequenceChange, typeOfSequence, currentSequence}) {
 );
 
     return (
-            <select 
-            onChange={e => onSequenceChange(e.target.value)}
-
+            <select
+                value={currentSequence} 
+                onChange={e => onSequenceChange(e.target.value)}
                 name="sequence-dropdown"
-                className="dropdown"
-                defaultValue={currentSequence}
-                >
+                className="dropdown">
                 {sequenceButtons}
             </select>
 )

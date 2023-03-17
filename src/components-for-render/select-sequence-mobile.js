@@ -12,11 +12,10 @@ function SelectSequenceTypeMobile({onSequenceTypeChange, currentSequenceType}) {
     )
     return (
             <select 
-                
+                value={currentSequenceType}
                 onChange={e => onSequenceTypeChange(e.target.value, Object.getOwnPropertyNames(MUSIC_CONST[e.target.value])[0])}
                 name="sequence-type-dropdown"
-                className="dropdown"
-                defaultValue={currentSequenceType}>
+                className="dropdown">
                 {sequenceTypeOptions}
             </select>
     );

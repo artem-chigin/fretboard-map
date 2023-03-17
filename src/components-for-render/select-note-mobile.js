@@ -10,10 +10,10 @@ function SelectRootNoteMobile({onNoteChange, currentNoteName}) {
     )
     return (
             <select 
+                value={currentNoteName}
                 onChange={e => onNoteChange(e.target.value)}
                 name="notes-dropdown"
-                className="dropdown"
-                defaultValue={currentNoteName}>
+                className="dropdown">
                 {NoteOptions}
             </select>
     )
