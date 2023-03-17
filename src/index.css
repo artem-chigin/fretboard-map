@@ -40,8 +40,8 @@ footer {
 
 .sequence {
     margin: 0 auto;
-    max-width: 60vw;
-    font-size: 3vh;
+    max-width: 90vw;
+    font-size: 4vh;
     text-align: center;
 }
 
@@ -268,7 +268,8 @@ footer {
         display: flex;
     }
     .sequence {
-        font-size: 5vh;
+        font-size: 3.9vh;
+        padding: 3vh 0;
     }
 }
 
