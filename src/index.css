@@ -156,8 +156,8 @@ footer {
 .dropdown {
     min-width: 50%;
     box-sizing: border-box;
-    height: 5vw;
-    font-size: 3vw;
+    height: 6vh;
+    font-size: 5vw;
     text-align: center;
     background-color: #2A6041;
     color: whitesmoke;
@@ -184,6 +184,10 @@ footer {
         }
         header {
             display: none;
+        }
+        .dropdown {
+            height: 10vh;
+            font-size: 3.8vh;
         }
     }
         
