@@ -9,6 +9,7 @@ body {
     flex-direction: column;
 }
 
+
 header {
     display: flex;
     justify-content: center;
@@ -18,10 +19,6 @@ header {
     font-size: 2vh;
     color: whitesmoke;
 }
-
-/* main {
-    min-height: 88vh;
-} */
 
 footer {
     display: flex;
@@ -41,15 +38,32 @@ footer {
     justify-content: space-between;
 }
 
-.mobile-ui {
-    display: none;
+.sequence {
+    margin: 0 auto;
+    max-width: 60vw;
+    font-size: 3vh;
+    text-align: center;
 }
+
+.inner-instrument-container {
+    display: flex;
+}
+
+.fretboard {
+    margin: 0 auto;
+}
+
+.string {
+    display: flex;
+    background-color: burlywood;
+    border-bottom: solid 0.3vh;
+}
+
 
 .ui-and-info {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
     margin-top: 1vh;
     gap: 1vw;
 }
@@ -57,7 +71,6 @@ footer {
 .info {
     display: flex;
     flex-direction: column;
-    /* padding: 0.5vw; */
     justify-content:space-evenly;
     align-items: center;
     align-self: flex-start;
@@ -67,26 +80,7 @@ footer {
     max-height: 13vw;
     background-color: #E9E9ED;
     border-radius: 1vw;
-    font-size: 1.5vw;
-}
-
-.sequence {
-    margin: 10px auto;
-    max-width: 60vw;
-    font-size: 3vh;
-    text-align: center;
-}
-
-.instrument-container {
-    margin: 20px auto 40px auto;
-}
-
-.inner-instrument-container {
-    display: flex;
-}
-
-.fretboard {
-    margin: 20px auto 0px auto;
+    font-size: 1.1vw;
 }
 
 .fretNumContainer {
@@ -138,13 +132,6 @@ footer {
         width: 3.6vw;
         height: 3.2vw;
         border-right: solid whitesmoke 2px;
-        /* border-bottom: solid black 0.2vh; */
-}
-
-.string {
-    display: flex;
-    background-color: burlywood;
-    border-bottom: solid 0.3vh;
 }
 
 .string-container {
@@ -159,7 +146,51 @@ footer {
     width: 3vw;
 }
 
-@media screen and (max-width: 650px) {
+.mobile-ui {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 100vw;
+}
+
+.dropdown {
+    min-width: 50%;
+    box-sizing: border-box;
+    height: 5vw;
+    font-size: 3vw;
+    text-align: center;
+    background-color: #2A6041;
+    color: whitesmoke;
+    border: none;
+    border-bottom: whitesmoke solid 1px;
+    border-right: whitesmoke solid 1px;
+}
+
+@media only screen and (orientation: landscape) {
+ 
+
+    @media only screen and (max-width: 1024px) {
+        .fretboard-app {
+            min-height: 95vh;
+        }
+        .ui-and-info {
+            display: none;
+        }
+        .mobile-ui {
+            display: block;
+        }
+        .dropdown {
+            min-width: 25vw;
+        }
+        header {
+            display: none;
+        }
+    }
+        
+}
+
+
+@media screen and (orientation: portrait){
     header {
         display: none;
     }
@@ -181,6 +212,7 @@ footer {
         display: inline;
     }
     .string {
+        display: flex;
         flex-direction: column;
         border-left: solid;
         border-bottom: none;
@@ -234,22 +266,6 @@ footer {
     }
     .mobile-ui {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        min-width: 100vw;
-    }
-    .dropdown {
-        min-width: 50%;
-        /* flex: 1; */
-        box-sizing: border-box;
-        height: 5vw;
-        font-size: 3vw;
-        text-align: center;
-        background-color: #2A6041;
-        color: whitesmoke;
-        border: none;
-        border-bottom: whitesmoke solid 1px;
-        border-right: whitesmoke solid 1px;
     }
     .sequence {
         font-size: 5vh;
@@ -274,40 +290,23 @@ background-color: whitesmoke;
 .select-instrument button {
     height: 3vw;
     width: 12vw;
-    /* margin-right: 20px; */
-    font-size: 1.3vw;
+    font-size: 0.9vw;
 }
-
-/* .select-note {
-    text-align: center;
-} */
 
 .select-note button {
     width: 2.5vw;
     height: 2.5vw;
-    font-size: 1vw;
-    /* margin-right: 15px; */
+    font-size: 0.9vw;
 }
-
-/* .select-sequence {
-    text-align: center;
-    margin: 10px 0;
-} */
 
 .select-sequence button {
     width: 10vw;
     height: 2vw;
-    /* margin-right: 20px; */
-    font-size: 1vw;
+    font-size: 0.9vw;
 }
 
-/* .sequence-panel {
-    text-align: center;
-} */
-
 .sequence-panel button {
-    /* margin-right: 5px; */
-    font-size: 1vw;
+    font-size: 0.9vw;
     padding: 0.25vw;
 }
 
@@ -317,10 +316,6 @@ button {
     border-radius: 0.5vw;
 }
 
-/* .sequence-name-buttons {
-    padding: 3px;
-} */
-
 button:hover {
     background-color: #2A6041;
     border: none;
@@ -329,5 +324,4 @@ button:hover {
 
 .empty-block {
     min-height: 5vh;
-    /* height: 10vh; */
 }
