@@ -3,7 +3,6 @@ import DisplayInstrument from './display-instrument';
 import SelectInstrument from './select-instrument';
 import SelectInstrumentMobile from './select-instrument-mobile';
 import SelectRootNote from './select-note';
-
 import SelectSequenceType from './select-sequence';
 import SelectSequenceTypeMobile from './select-sequence-mobile';
 import SequencePanel from './sequence-panel';
@@ -19,7 +18,7 @@ import SelectRootNoteMobile from './select-note-mobile';
 function UI() {
 
     const defaultSettings = {
-        instrument: instruments.baritoneUke,
+        instrument: instruments["Bariton Ukulele"],
         rootNote: "G",
         sequenceType: "intervals",
         sequenceName: "p1",
@@ -28,6 +27,7 @@ function UI() {
 
     let settings = JSON.parse(localStorage.getItem("settings")) || defaultSettings;
 
+    // const [instrumentVarName, setInstrumentVarName] = useState(settings.instrument);
     const [currentInstrument, setCurrentInstrument] = useState(new MusicalInstrument(settings.instrument));
     const [rootNote, setrootNote] = useState(settings.rootNote);
     const [sequenceType, setSequenceType] = useState(settings.sequenceType);
@@ -37,6 +37,7 @@ function UI() {
     function setInstrument(settingsValues) {
         const newInstrument = new MusicalInstrument(settingsValues);
         setCurrentInstrument(newInstrument);
+        // setInstrumentVarName(settingsValues);
         settings.instrument = settingsValues;
         localStorage.setItem("settings", JSON.stringify(settings));
     }

@@ -8,16 +8,17 @@ function SelectInstrumentMobile({onInstrumentChange, currentInstrumentName}) {
         handleClickArguments={name} 
         optionName={instruments[name].instrumentName}
         key={"instrument" + index} />
-)
-return (
-        <select 
-            onChange={e => onInstrumentChange(instruments[e.target.value])}
-            name="instruments-dropdown"
-            className="dropdown"
-            defaultValue={currentInstrumentName}>
-        {instrumentsDropdown}
-        </select>
-)
+    )
+    return (
+            <select
+                value={currentInstrumentName}
+                onChange={e => onInstrumentChange(instruments[e.target.value])}
+                name="instruments-dropdown"
+                className="dropdown"
+                >
+            {instrumentsDropdown}
+            </select>
+    )
 
 }
 
