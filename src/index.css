@@ -177,7 +177,8 @@ footer {
             display: none;
         }
         .mobile-ui {
-            display: block;
+            display: flex;
+            flex-wrap: nowrap;
         }
         .dropdown {
             min-width: 25vw;
