@@ -2,7 +2,7 @@ import MUSIC_CONST from "../../instrument-scale-calculations/musical-constants";
 import DropDownOption from "../dropdown";
 
 function SelectSequenceTypeMobile({onSequenceTypeChange, currentSequenceType}) {
-    const sequences = Object.getOwnPropertyNames(MUSIC_CONST).slice(2);
+    const sequences = Object.getOwnPropertyNames(MUSIC_CONST).slice(3);
     const sequenceTypeOptions = sequences.map((sequenceName, index) => {
         return <DropDownOption 
             optionName={sequenceName} 

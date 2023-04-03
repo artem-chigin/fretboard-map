@@ -4,7 +4,7 @@ import MUSIC_CONST from "../../instrument-scale-calculations/musical-constants";
 
 function SelectSequenceType({onSequenceClick, currentSequenceType}) {
 
-    const sequences = Object.getOwnPropertyNames(MUSIC_CONST).slice(2);
+    const sequences = Object.getOwnPropertyNames(MUSIC_CONST).slice(3);
     const sequenceTypeButtons = sequences.map((sequenceName, index) => {
         let firstSequenceElement = Object.getOwnPropertyNames(MUSIC_CONST[sequenceName])[0];
         return <Button 

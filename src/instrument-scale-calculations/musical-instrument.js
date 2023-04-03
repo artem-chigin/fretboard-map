@@ -43,7 +43,12 @@ class MusicalInstrument {
     }
 
 
-    generateSeqence(tonics, sequenceSchemme) {
+    generateSeqence(tonics, sequenceSchemme, sharp=true) {
+        let chromaticScale = MUSIC_CONST.chromaticScale;
+
+        if (sharp === false) {
+            chromaticScale =MUSIC_CONST.chromaticScaleFlat;
+        }
         let [note, octaveNum] = tonics
         let noteIndex = MUSIC_CONST.chromaticScale.indexOf(note);
         const chordIndexes = [];
@@ -61,7 +66,7 @@ class MusicalInstrument {
             let shift = (index - newIndex)/MUSIC_CONST.notesInChromaticScale;
             let newOctaveNum = Number(octaveNum) + shift
             // notesSequence.push(MUSIC_CONST.chromaticScale[newIndex] + String(newOctaveNum))
-            notesSequence.push(MUSIC_CONST.chromaticScale[newIndex])
+            notesSequence.push(chromaticScale[newIndex])
         }
         return notesSequence
 }

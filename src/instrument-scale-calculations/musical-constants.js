@@ -1,5 +1,6 @@
 const MUSIC_CONST = {
     chromaticScale: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"],
+    chromaticScaleFlat: ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"],
     notesInChromaticScale: 12,
     intervals: {
         p1: [0],
