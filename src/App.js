@@ -1,11 +1,10 @@
-import UI from './components-for-render/ui';
-
+import FretboardMap from './components-for-render/fretboard-map/fretboard-map';
 
 
 function App() {
         return (
         <div className='App'>
-            <UI />
+            <FretboardMap />
         </div>
         )
 }

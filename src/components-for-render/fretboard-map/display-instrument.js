@@ -1,4 +1,4 @@
-import noteColors from "../instrument-scale-calculations/notes-colors";
+import noteColors from "../../instrument-scale-calculations/notes-colors";
 
 function DisplayInstrument({instrument, rootNote, isMobile}) {
 

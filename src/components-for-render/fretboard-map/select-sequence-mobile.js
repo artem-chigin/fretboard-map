@@ -1,5 +1,5 @@
-import MUSIC_CONST from "../instrument-scale-calculations/musical-constants";
-import DropDownOption from "./dropdown";
+import MUSIC_CONST from "../../instrument-scale-calculations/musical-constants";
+import DropDownOption from "../dropdown";
 
 function SelectSequenceTypeMobile({onSequenceTypeChange, currentSequenceType}) {
     const sequences = Object.getOwnPropertyNames(MUSIC_CONST).slice(2);

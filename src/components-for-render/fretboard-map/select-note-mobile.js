@@ -1,5 +1,5 @@
-import MUSIC_CONST from "../instrument-scale-calculations/musical-constants"
-import DropDownOption from "./dropdown"
+import MUSIC_CONST from "../../instrument-scale-calculations/musical-constants"
+import DropDownOption from "../dropdown"
 
 function SelectRootNoteMobile({onNoteChange, currentNoteName}) {
     const NoteOptions = MUSIC_CONST.chromaticScale.map((note, index) =>

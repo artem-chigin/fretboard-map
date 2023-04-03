@@ -1,5 +1,5 @@
-import Button from "./button";
-import instruments from "../instrument-scale-calculations/instruments";
+import Button from "../button";
+import instruments from "../../instrument-scale-calculations/instruments";
 
 function SelectInstrument({onInstrumentClick, currentInstrumentName}) {
 

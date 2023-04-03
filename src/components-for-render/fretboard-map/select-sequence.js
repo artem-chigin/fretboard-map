@@ -1,5 +1,5 @@
-import Button from "./button";
-import MUSIC_CONST from "../instrument-scale-calculations/musical-constants";
+import Button from "../button";
+import MUSIC_CONST from "../../instrument-scale-calculations/musical-constants";
 
 
 function SelectSequenceType({onSequenceClick, currentSequenceType}) {

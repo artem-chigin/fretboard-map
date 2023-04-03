@@ -8,14 +8,14 @@ import SelectSequenceTypeMobile from './select-sequence-mobile';
 import SequencePanel from './sequence-panel';
 import SequenceDropDown from './sequence-dropdown-mobile';
 import InfoPanel from './info-panel';
-import instruments from "../instrument-scale-calculations/instruments";
-import MusicalInstrument from '../instrument-scale-calculations/musical-instrument';
-import MUSIC_CONST from '../instrument-scale-calculations/musical-constants';
+import instruments from "../../instrument-scale-calculations/instruments";
+import MusicalInstrument from '../../instrument-scale-calculations/musical-instrument';
+import MUSIC_CONST from '../../instrument-scale-calculations/musical-constants';
 import DisplaySequence from './display-sequence';
 import SelectRootNoteMobile from './select-note-mobile';
 
 
-function UI() {
+function FretboardMap() {
 
     const defaultSettings = {
         instrument: instruments["Bariton Ukulele"],
@@ -123,4 +123,4 @@ function UI() {
 }
 
 
-export default UI;
+export default FretboardMap;

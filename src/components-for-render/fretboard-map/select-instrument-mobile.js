@@ -1,5 +1,5 @@
-import instruments from "../instrument-scale-calculations/instruments";
-import DropDownOption from "./dropdown";
+import instruments from "../../instrument-scale-calculations/instruments";
+import DropDownOption from "../dropdown";
 
 function SelectInstrumentMobile({onInstrumentChange, currentInstrumentName}) {
     const instrumentArray = Object.getOwnPropertyNames(instruments);
