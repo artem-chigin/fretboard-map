@@ -7,12 +7,21 @@ import CircleOfFifths from './components-for-render/circle-of-fifths/circle-of-f
 function App() {
     const [currentSubApp, setCurrentSubApp] = useState("fretboard-map");
 
+    if (process.env.NODE_ENV !== 'production') {     
+
         return (
         <div className='App'>
             <SelectSubApp onSubAppChange={(value) => setCurrentSubApp(value)}/>
             {currentSubApp === "fretboard-map" ? <FretboardMap /> : <CircleOfFifths />}
         </div>
         )
+    } else {
+        return (
+            <div className='App'>
+                <FretboardMap />
+            </div>
+        )
+    }
 }
 
 export default App
