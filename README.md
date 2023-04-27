@@ -1,5 +1,5 @@
-![Fretboard map main view](./public/fretboard-map-App.png)<br>
-
+![Fretboard map main view](./public/fretboard-map-App.png)
+<br>
 
 # Fretboard Map.
 
@@ -8,7 +8,7 @@ The App generate string instrument representation (like guitar, bass, ukulele) a
 
 ### Site
 
-[Fretboard Map](fretboard-map.web.app/)<br>
+[Fretboard Map](https://fretboard-map.web.app/)<br>
 
 
 ### Mobile support
@@ -20,4 +20,4 @@ The application is adapted to the screens of mobile devices.<br>
 ### Roadmap
 
 I plan to develop the App in the direction that will help me better understand music theory.
-Now i am working on Interactive Circle of Fifths.
+Now i am working on Interactive Circle of Fifths.<br>
