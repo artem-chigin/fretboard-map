@@ -1,14 +1,14 @@
-![Fretboard map main view](./public/fretboard-map-App.png)
-<br>
+# Fretboard Map
 
-# Fretboard Map.
+![Fretboard map main view](./public/fretboard-map-App.png)
 
 This web application was created in order to help me explore fretboard of my baritone ukulele.  
 The App generate string instrument representation (like guitar, bass, ukulele) and visualise notes, chords and scales.<br>
 
 ### Site
 
-[Fretboard Map](https://fretboard-map.web.app/)<br>
+[Fretboard Map](https://fretboard-map.web.app/)
+<br>
 
 
 ### Mobile support
@@ -16,6 +16,13 @@ The App generate string instrument representation (like guitar, bass, ukulele) a
 ![Fretboard map mobile view](./public/Fretboard-map-App-mobile.png)
 
 The application is adapted to the screens of mobile devices.<br>
+
+### Technologies
+
+- JavaScript
+- React
+- HTML
+- CSS
 
 ### Roadmap
 
