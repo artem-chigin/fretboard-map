@@ -5,11 +5,11 @@ function DisplayInstrument({ instrument, rootNote, isMobile }) {
     return (
       <div className="inner-instrument-container">
         <div className="fretboard">
-          <FretNumbers fretNumbers={instrument.numberOfNotes} />
           <FretBoard
             fretboard={instrument.instrumentRepresentation}
             rootNote={rootNote}
           />
+          <FretNumbers fretNumbers={instrument.numberOfNotes} />
         </div>
       </div>
     );
@@ -26,8 +26,6 @@ function FretNumbers({ fretNumbers }) {
   const numbers = Array.from(Array(fretNumbers + 1).keys()).map(
     (number, index) => (
       <div key={"fretnum" + index} className={"fretNumContainer"}>
-        <div>{number}</div>
-        {/* <div>{oneDottedFrets.has(number) ? "●" : ""}</div> */}
         <div>
           {oneDottedFrets.has(number)
             ? "●"
@@ -35,6 +33,7 @@ function FretNumbers({ fretNumbers }) {
             ? "●●"
             : ""}
         </div>
+        <div>{number}</div>
       </div>
     )
   );
