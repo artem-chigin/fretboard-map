@@ -21,12 +21,20 @@ function FretNumbers({ fretNumbers }) {
   //     minWidth: "52px",
   //     display: "inline-block",
   //     textAlign: "center"}
-  const dots = new Set([3, 5, 7, 9, 12, 15, 17, 19, 21]);
+  const oneDottedFrets = new Set([3, 5, 7, 9, 15, 17, 19, 21]);
+  const twoDottedFrets = new Set([12, 24]);
   const numbers = Array.from(Array(fretNumbers + 1).keys()).map(
     (number, index) => (
       <div key={"fretnum" + index} className={"fretNumContainer"}>
         <div>{number}</div>
-        <div>{dots.has(number) ? "●" : ""}</div>
+        {/* <div>{oneDottedFrets.has(number) ? "●" : ""}</div> */}
+        <div>
+          {oneDottedFrets.has(number)
+            ? "●"
+            : twoDottedFrets.has(number)
+            ? "●●"
+            : ""}
+        </div>
       </div>
     )
   );
