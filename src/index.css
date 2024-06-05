@@ -112,9 +112,9 @@ footer {
 }
 
 .fretNumContainer {
-  min-width: 3.2vw;
-  width: 3.6vw;
-  font-size: 2vh;
+  width: 5.5rem;
+
+  font-size: 1.4rem;
   display: inline-block;
   text-align: center;
 }
@@ -122,7 +122,7 @@ footer {
 .fretNumbers {
   display: flex;
   justify-content: flex-end;
-  margin-top: 2%;
+  margin-top: 3.2rem;
   align-items: end;
 }
 
@@ -133,21 +133,21 @@ footer {
   justify-content: center;
   color: whitesmoke;
   position: relative;
-  top: 1.6vw;
-  font-size: 1.2vw;
+  top: 50%;
+  font-size: 1.8rem;
 }
 
 .note {
-  width: 2.4vw;
-  height: 2.4vw;
-  border-radius: 1.2vw;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
 }
 
 .root-note {
-  width: 2.5vw;
-  height: 2.5vw;
-  border-radius: 1.25vw;
-  border: solid 0.15vw;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  border: solid 0.2rem;
 }
 
 .noteContainer {
@@ -155,9 +155,9 @@ footer {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  min-width: 3.2vw;
-  width: 3.6vw;
-  height: 3.2vw;
+  /* min-width: 3.2vw; */
+  width: 5.5rem;
+  height: 4.8rem;
   border-right: solid whitesmoke 2px;
 }
 
