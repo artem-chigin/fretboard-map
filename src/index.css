@@ -1,84 +1,103 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
 }
 
 header {
+  height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 10vh;
   background-color: #2a6041;
-  font-size: 2vh;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
   color: whitesmoke;
 }
 
 footer {
   display: flex;
-  gap: 20px;
-  /* flex-direction: column; */
+  gap: 4rem;
   justify-content: center;
   align-items: center;
-  min-height: 5vh;
-  text-align: center;
   background-color: #2a6041;
   color: whitesmoke;
-  font-size: 2vh;
+  font-size: 1.8rem;
+  padding: 2rem 0;
 }
 
-.repository-link {
+.repository-link:link,
+.repository-link:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
   color: whitesmoke;
   text-decoration: none;
 }
 
+.repository-link:hover,
+.repository-link:active {
+  /* border-bottom: whitesmoke solid 1px; */
+}
+
 .fretboard-app {
-  min-height: 85vh;
+  /* min-height: 85vh; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 2rem;
 }
 
 .sequence {
   margin: 0 auto;
   max-width: 90vw;
-  font-size: 4vh;
+  font-size: 3.2rem;
+  font-weight: 600;
   text-align: center;
 }
 
 .inner-instrument-container {
   display: flex;
+  justify-content: center;
 }
 
 .fretboard {
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  /* align-self: center; */
 }
 
 .string {
   display: flex;
   background-color: burlywood;
-  border-bottom: solid 0.3vh;
+  border-bottom: solid 0.2rem;
 }
 
 .ui-and-info {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: center;
-  margin-top: 1vh;
-  gap: 1vw;
+  margin-top: 1rem;
+  gap: 2rem;
 }
 
 .info {
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
