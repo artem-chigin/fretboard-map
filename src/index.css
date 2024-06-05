@@ -269,6 +269,7 @@ footer {
     height: 12vw;
     width: 15vw;
     box-sizing: border-box;
+    margin-right: 32px;
   }
   .ui-and-info {
     display: none;
