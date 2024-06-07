@@ -3,14 +3,12 @@ import noteColors from "../../instrument-scale-calculations/notes-colors";
 function DisplayInstrument({ instrument, rootNote, isMobile }) {
   if (isMobile === false) {
     return (
-      <div className="inner-instrument-container">
-        <div className="fretboard">
-          <FretBoard
-            fretboard={instrument.instrumentRepresentation}
-            rootNote={rootNote}
-          />
-          <FretNumbers fretNumbers={instrument.numberOfNotes} />
-        </div>
+      <div className="fretboard">
+        <FretBoard
+          fretboard={instrument.instrumentRepresentation}
+          rootNote={rootNote}
+        />
+        <FretNumbers fretNumbers={instrument.numberOfNotes} />
       </div>
     );
   }
