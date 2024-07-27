@@ -32,12 +32,16 @@ body {
 }
 
 header {
-  height: 8rem;
-  display: flex;
-  flex-shrink: 0;
+  /* height: 8rem; */
+  /* display: flex; */
+  position: absolute;
+  right: 0;
+
+  /* flex-shrink: 0;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   background-color: #2a6041;
+  padding: 1rem;
 }
 
 header h1 {
@@ -51,10 +55,12 @@ footer {
   gap: 4rem;
   justify-content: center;
   align-items: center;
-  background-color: #2a6041;
-  color: whitesmoke;
+  /* background-color: #2a6041; */
+  background-color: whitesmoke;
+  /* color: whitesmoke; */
   font-size: 1.8rem;
-  padding: 2rem 0;
+  color: #777;
+  padding: 1rem 0;
   /* justify-self: flex-end; */
   /* margin: auto 0 0 0; */
 }
@@ -71,7 +77,8 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  color: whitesmoke;
+  /* color: whitesmoke; */
+  color: #444;
   text-decoration: none;
 }
 
@@ -102,20 +109,19 @@ footer {
 }
 
 .instrument-container {
-  /* margin: auto 0; */
-  display: flex;
-  justify-content: center;
+  /* max-width: 94%; */
+  margin: 0 4%;
 }
 
 .fretboard {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* margin-bottom: 8rem; */
+  max-width: 100%;
 }
 
 .string {
+  max-width: 100%;
   display: flex;
+  flex-grow: 1;
+  /* flex-shrink: 1; */
   background-color: burlywood;
   border-bottom: solid 0.2rem;
 }
@@ -145,11 +151,12 @@ footer {
 }
 
 .fretNumContainer {
-  width: 7rem;
+  width: 6.6rem;
 
   font-size: 1.4rem;
   display: inline-block;
   text-align: center;
+  flex-grow: 1;
 }
 
 .fretNumbers {
@@ -157,6 +164,7 @@ footer {
   justify-content: flex-end;
   margin-top: 3.2rem;
   align-items: end;
+  padding-left: 3rem;
 }
 
 .note,
@@ -171,32 +179,34 @@ footer {
 }
 
 .note {
-  width: 5rem;
-  height: 5rem;
+  width: 4.8rem;
+  height: 4.8rem;
   border-radius: 50%;
 }
 
 .root-note {
-  width: 5.2rem;
-  height: 5.2rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  border: solid 0.4rem;
+  border: solid 0.2rem;
 }
 
 .noteContainer {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   /* min-width: 3.2vw; */
-  width: 7rem;
-  height: 6.4rem;
+  width: 6.6rem;
+  height: 6.2rem;
   border-right: solid whitesmoke 2px;
 }
 
 .string-container {
   display: flex;
   align-items: end;
+  gap: 1rem;
 }
 
 .open-string {
@@ -204,7 +214,8 @@ footer {
   position: relative;
   top: 1.2rem;
   font-size: 2.4rem;
-  width: 4rem;
+  width: 2rem;
+  flex-shrink: 0;
 }
 
 .mobile-ui {

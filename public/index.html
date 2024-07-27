@@ -24,6 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
     <title>Fretboard map</title>
   </head>
   <body>
@@ -35,8 +36,10 @@
         <!-- <div id="root" class="root"></div> -->
       </main>
       <footer>
-        <p>Artem Chigin 2023</p>
-        <a
+        <p class="footer-text">
+          Artem Chigin 2023 - <span class="current-year">%CURRENT_YEAR%</span>
+        </p>
+        <!-- <a
           class="repository-link"
           href="https://github.com/artem-chigin/ukulele_project"
         >
@@ -47,8 +50,12 @@
             width="32"
             height="32"
           />
-        </a>
+        </a> -->
       </footer>
     </div>
   </body>
+  <script>
+    const currentYear = document.querySelector(".current-year");
+    currentYear.textContent = new Date().getFullYear();
+  </script>
 </html>
