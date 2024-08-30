@@ -19,28 +19,39 @@ body {
 }
 
 .screen {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
-.main,
+/* .main,
 .App,
 .fretboard-app {
   height: 100%;
+} */
+
+.main {
+  display: flex;
+
+  flex-grow: 1;
+}
+
+.App {
+  flex-grow: 1;
 }
 
 header {
-  /* height: 8rem; */
-  /* display: flex; */
-  position: absolute;
-  right: 0;
+  height: 8rem;
+  display: flex;
+  /* position: absolute;
+  right: 0; */
 
-  /* flex-shrink: 0;
+  flex-shrink: 0;
   justify-content: center;
-  align-items: center; */
-  background-color: #2a6041;
+  align-items: center;
+  /* background-color: #2a6041; */
+  background-color: whitesmoke;
   padding: 1rem;
 }
 
@@ -48,6 +59,7 @@ header h1 {
   font-size: 3.2rem;
   font-weight: 500;
   color: whitesmoke;
+  color: #2a6041;
 }
 
 footer {
@@ -55,12 +67,12 @@ footer {
   gap: 4rem;
   justify-content: center;
   align-items: center;
-  /* background-color: #2a6041; */
   background-color: whitesmoke;
-  /* color: whitesmoke; */
   font-size: 1.8rem;
   color: #777;
   padding: 1rem 0;
+  margin-top: auto;
+
   /* justify-self: flex-end; */
   /* margin: auto 0 0 0; */
 }
@@ -417,6 +429,7 @@ main,
 }
 
 button {
+  background-color: #ddd;
   color: black;
   border: none;
   border-radius: 0.75rem;
