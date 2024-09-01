@@ -1,3 +1,5 @@
+/* GENERAL STYLING */
+
 * {
   margin: 0;
   padding: 0;
@@ -22,14 +24,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
-
-/* .main,
-.App,
-.fretboard-app {
-  height: 100%;
-} */
 
 .main {
   display: flex;
@@ -50,8 +45,8 @@ header {
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  /* background-color: #2a6041; */
-  background-color: whitesmoke;
+  background-color: #2a6041;
+  /* background-color: whitesmoke; */
   padding: 1rem;
 }
 
@@ -59,7 +54,7 @@ header h1 {
   font-size: 3.2rem;
   font-weight: 500;
   color: whitesmoke;
-  color: #2a6041;
+  /* color: #2a6041; */
 }
 
 footer {
@@ -99,9 +94,11 @@ footer {
   /* border-bottom: whitesmoke solid 1px; */
 }
 
-.mobile-and-decktop-ui {
+/* .mobile-and-decktop-ui {
   padding: 2rem 0;
-}
+} */
+
+/* FRETBOARD Styling */
 
 .fretboard-app {
   height: 100%;
@@ -122,7 +119,8 @@ footer {
 
 .instrument-container {
   /* max-width: 94%; */
-  margin: 0 4%;
+  margin: 0 3%;
+  overflow-x: scroll;
 }
 
 .fretboard {
@@ -162,18 +160,22 @@ footer {
   font-size: 1.1vw;
 }
 
-.fretNumContainer {
+.fretNumContainer,
+.noteContainer {
   width: 6.6rem;
+}
 
+.fretNumContainer {
   font-size: 1.4rem;
   display: inline-block;
   text-align: center;
   flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .fretNumbers {
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   margin-top: 3.2rem;
   align-items: end;
   padding-left: 3rem;
@@ -205,12 +207,12 @@ footer {
 
 .noteContainer {
   flex-grow: 1;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  /* min-width: 3.2vw; */
-  width: 6.6rem;
+
   height: 6.2rem;
   border-right: solid whitesmoke 2px;
 }
@@ -251,14 +253,58 @@ footer {
 }
 
 @media only screen and (orientation: landscape) {
-  @media only screen and (max-width: 1024px) {
+  /* Below 1800px */
+  @media (max-width: 112em) {
+    .noteContainer,
+    .fretNumContainer {
+      width: 5rem;
+    }
+  }
+
+  /* Below 1550px */
+  @media (max-width: 96em) {
     html {
-      /* font-size: 45%; */
+      font-size: 56.25%;
     }
 
+    .note {
+      width: 4rem;
+      height: 4rem;
+    }
+    .root-note {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+  }
+
+  /* Below 1200px */
+  @media (max-width: 75em) {
+    html {
+      font-size: 50%;
+    }
+    .noteContainer,
+    .fretNumContainer {
+      width: 4.5rem;
+    }
+
+    .note {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+    .root-note {
+      width: 4.1rem;
+      height: 4.1rem;
+    }
+  }
+
+  /* Below 1024px */
+  @media only screen and (max-width: 64em) {
     /* .App {
       height: 100vh;
     } */
+    header {
+      display: none;
+    }
 
     .fretboard-app {
       /* height: 100%; */
