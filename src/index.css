@@ -456,6 +456,14 @@ main,
   background-color: whitesmoke;
 }
 
+.select-instrument-dropdown {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25%;
+  height: 5rem;
+}
+
 .select-instrument,
 .select-note,
 .select-sequence,

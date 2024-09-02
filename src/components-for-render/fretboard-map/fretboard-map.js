@@ -101,8 +101,14 @@ function FretboardMap() {
         <div className="desktop-ui">
           <div className="ui-and-info">
             <div className="ui">
-              <SelectInstrument
+              {/* <SelectInstrument
                 onInstrumentClick={(instrumentSettings) =>
+                  setInstrument(instrumentSettings)
+                }
+                currentInstrumentName={currentInstrument.instrumentName}
+              /> */}
+              <SelectInstrumentMobile
+                onInstrumentChange={(instrumentSettings) =>
                   setInstrument(instrumentSettings)
                 }
                 currentInstrumentName={currentInstrument.instrumentName}
