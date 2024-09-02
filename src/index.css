@@ -57,6 +57,21 @@ header h1 {
   /* color: #2a6041; */
 }
 
+.contacts {
+  position: absolute;
+  right: 0;
+  padding: 0 3%;
+
+  display: flex;
+  gap: 2rem;
+}
+
+.icon {
+  fill: whitesmoke;
+  width: 5rem;
+  height: 5rem;
+}
+
 footer {
   display: flex;
   gap: 4rem;
@@ -78,20 +93,24 @@ footer {
   left: 0;
 }
 
-.repository-link:link,
-.repository-link:visited {
-  display: flex;
+.contacts-link:link,
+.contacts-link:visited {
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  /* color: whitesmoke; */
-  color: #444;
-  text-decoration: none;
+  gap: 1rem; */
+  /* text-decoration: none; */
+  transition: all 0.3s;
 }
 
-.repository-link:hover,
-.repository-link:active {
+.contacts-link:hover,
+.contacts-link:active {
   /* border-bottom: whitesmoke solid 1px; */
+  /* border-radius: 50%;
+  border: solid whitesmoke 1px; */
+  border-right: solid 2px whitesmoke;
+  border-bottom: solid 2px whitesmoke;
+  border-radius: 30%;
 }
 
 /* .mobile-and-decktop-ui {
