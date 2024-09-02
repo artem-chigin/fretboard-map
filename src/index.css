@@ -37,7 +37,7 @@ body {
 }
 
 header {
-  height: 8rem;
+  height: 7rem;
   display: flex;
   /* position: absolute;
   right: 0; */
@@ -59,32 +59,36 @@ header h1 {
 
 .contacts {
   position: absolute;
-  right: 0;
-  padding: 0 3%;
-
   display: flex;
   gap: 2rem;
+  right: 3%;
+  bottom: 1rem;
 }
 
 .icon {
-  fill: whitesmoke;
+  fill: #2a6041;
   width: 5rem;
   height: 5rem;
 }
 
 footer {
+  position: relative;
   display: flex;
-  gap: 4rem;
+  /* gap: 4rem; */
   justify-content: center;
   align-items: center;
   background-color: whitesmoke;
   font-size: 1.8rem;
-  color: #777;
   padding: 1rem 0;
   margin-top: auto;
 
   /* justify-self: flex-end; */
   /* margin: auto 0 0 0; */
+}
+
+footer p {
+  /* display: block; */
+  color: #7fa08d;
 }
 
 .sub-app {
@@ -95,6 +99,7 @@ footer {
 
 .contacts-link:link,
 .contacts-link:visited {
+  display: block;
   /* display: flex;
   justify-content: center;
   align-items: center;
@@ -108,9 +113,10 @@ footer {
   /* border-bottom: whitesmoke solid 1px; */
   /* border-radius: 50%;
   border: solid whitesmoke 1px; */
-  border-right: solid 2px whitesmoke;
-  border-bottom: solid 2px whitesmoke;
-  border-radius: 30%;
+  /* border-right: solid 2px #2a6041;
+  border-bottom: solid 2px #2a6041;
+  border-radius: 30%; */
+  transform: scale(1.1);
 }
 
 /* .mobile-and-decktop-ui {
