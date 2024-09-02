@@ -120,7 +120,7 @@ footer {
 .instrument-container {
   /* max-width: 94%; */
   margin: 0 3%;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 
 .fretboard {
@@ -299,16 +299,19 @@ footer {
 
   /* Below 1024px */
   @media only screen and (max-width: 64em) {
-    /* .App {
-      height: 100vh;
-    } */
+    html {
+      font-size: 45%;
+    }
+
+    .instrument-container {
+      margin: 0 1%;
+      /* overflow-x: scroll; */
+    }
+
     header {
       display: none;
     }
 
-    .fretboard-app {
-      /* height: 100%; */
-    }
     .ui-and-info {
       display: none;
     }
@@ -319,34 +322,19 @@ footer {
     .dropdown {
       width: 25%;
     }
-    /* header {
-      display: none;
-    } */
+
     .dropdown {
       height: 4.8rem;
       font-size: 3.2rem;
     }
   }
 
-  .fretboard {
-    /* overflow: scroll; */
+  /* Below  840px*/
+  @media (max-width: 53em) {
+    html {
+      font-size: 39%;
+    }
   }
-
-  /* Stopped here */
-
-  /* .noteContainer {
-    width: 3.8rem;
-  } */
-
-  /* .fretNumContainer {
-    width: 3.8rem;
-  }
-
-  .note,
-  .root-note {
-    width: 3.2rem;
-    height: 3.2rem;
-  } */
 }
 
 @media screen and (orientation: portrait) {
