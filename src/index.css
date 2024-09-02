@@ -37,7 +37,7 @@ body {
 }
 
 header {
-  height: 7rem;
+  height: 5rem;
   display: flex;
   /* position: absolute;
   right: 0; */
@@ -171,7 +171,6 @@ footer p {
 
 .info {
   display: none;
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -488,9 +487,13 @@ main,
 }
 
 button {
-  background-color: #ddd;
-  color: black;
+  /* background-color: #ddd; */
+  background-color: whitesmoke;
+  /* color: black; */
+  color: #224d34;
   border: none;
+  border-bottom: solid 1px #2a6041;
+  border-right: solid 1px #224d34;
   border-radius: 0.75rem;
   font-size: 1.6rem;
 }
