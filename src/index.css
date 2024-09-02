@@ -94,7 +94,7 @@ footer p {
 .sub-app {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .contacts-link:link,
@@ -263,10 +263,15 @@ footer p {
   /* min-width: 100vw; */
 }
 
+.select-instrument-dropdown {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25%;
+  height: 5rem;
+}
+
 .dropdown {
-  width: 50%;
-  /* box-sizing: border-box; */
-  height: 4.8rem;
   font-size: 2.4rem;
   text-align: center;
   background-color: #2a6041;
@@ -344,10 +349,9 @@ footer p {
       flex-wrap: nowrap;
     }
     .dropdown {
+      position: static;
       width: 25%;
-    }
 
-    .dropdown {
       height: 4.8rem;
       font-size: 3.2rem;
     }
@@ -443,6 +447,13 @@ footer p {
     font-size: 3.9vh;
     padding: 3vh 0;
   }
+
+  .dropdown {
+    width: 50%;
+    position: static;
+    height: 4.8rem;
+    font-size: 2.4rem;
+  }
 }
 
 [visibility="false"] {
@@ -454,14 +465,6 @@ main,
 [id="string0"],
 .open-string {
   background-color: whitesmoke;
-}
-
-.select-instrument-dropdown {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 25%;
-  height: 5rem;
 }
 
 .select-instrument,
