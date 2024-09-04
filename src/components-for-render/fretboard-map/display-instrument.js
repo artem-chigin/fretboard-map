@@ -38,7 +38,7 @@ function FretNumbers({ fretNumbers }) {
   return <div className="fretNumbers">{numbers}</div>;
 }
 
-function Note({ note, noteIndex, stringIndex, rootNote, isVertical }) {
+function Note({ note, noteIndex, stringIndex, rootNote }) {
   const noteStyle = {
     backgroundColor: noteColors[note.noteName],
   };
@@ -57,7 +57,12 @@ function Note({ note, noteIndex, stringIndex, rootNote, isVertical }) {
       id={"string" + stringIndex + "note" + noteIndex}
       className="noteContainer"
     >
-      <div className={noteClass} visibility={note.visibility} style={noteStyle}>
+      <div
+        className={noteClass}
+        visibility={note.visibility}
+        style={noteStyle}
+        onClick={() => {}}
+      >
         {note.noteName + note.octave}
       </div>
     </div>
