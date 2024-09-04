@@ -130,7 +130,6 @@ footer p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* gap: 3.2rem; */
 }
 
 .sequence {
@@ -140,6 +139,7 @@ footer p {
   font-weight: 600;
   text-align: center;
   padding: 2rem 0;
+  color: #2a6041;
 }
 
 .instrument-container {
@@ -165,8 +165,9 @@ footer p {
   display: flex;
   /* flex-direction: row; */
   justify-content: center;
-  margin-top: 1rem;
+  /* margin-top: 3rem; */
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .info {
@@ -260,6 +261,7 @@ footer p {
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
+
   /* min-width: 100vw; */
 }
 
@@ -373,6 +375,7 @@ footer p {
   .fretboard {
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: 4.8rem;
   }
 
   .fretNumbers {
@@ -454,6 +457,15 @@ footer p {
     height: 4.8rem;
     font-size: 2.4rem;
   }
+
+  footer {
+    flex-direction: column-reverse;
+    gap: 1.2rem;
+  }
+
+  .contacts {
+    position: static;
+  }
 }
 
 [visibility="false"] {
@@ -516,7 +528,7 @@ button:hover {
 }
 
 .empty-block {
-  min-height: 5vh;
+  height: 0;
 }
 
 .circle-of-fifths-container {
